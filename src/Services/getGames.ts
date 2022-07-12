@@ -2,7 +2,7 @@ import axios from "axios";
 import { GetDetails } from "../Models/getDetails";
 
 
-export default function GetGames(search: string ): Promise<GetDetails>{
+export default function GetGames(search: string ): Promise<GetDetails[]>{
   // try param as string OR number**
 
     // var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
