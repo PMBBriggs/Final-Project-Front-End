@@ -7,11 +7,11 @@ export default function Search(){
     const [game, setGames] = useState <GetDetails[]>([]);
     // const [search, setSearch] = useState ('');
 
-    useEffect(() => {
-        GetGames(name).then(data => {
-          setGames(data);
-        });
-      }, [name]);
+    // useEffect(() => {
+    //     GetGames(name).then(data => {
+    //       setGames(data);
+    //     });
+    //   }, [name]);
 
 
     return(<div className='SearchPage'>
