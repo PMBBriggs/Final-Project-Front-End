@@ -1,14 +1,17 @@
+// get a list of video games genres ADVANCED SEARCH?
+// https://api.rawg.io/api/genres
+
 import axios from "axios";
 import { GetDetails } from "../Models/getDetails";
 
-
-export default function GameDetails(id: number ): Promise<GetDetails>{
+// dont need id?
+export default function GameGenres(id: number ): Promise<GetDetails>{
   // try param as string OR number**
 
     // var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     return axios
-        .get(`https://api.rawg.io/api/games/${id}`,{
-          // ${id}^ NEED
+        .get(`https://api.rawg.io/api/genres`,{
+          
             params: {
                 key: 'fa8485bcb51e4a8dab23493baa1d1ce9',
                 id: id

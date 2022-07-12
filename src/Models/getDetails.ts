@@ -1,6 +1,7 @@
 // GETTING LIST OF DETAILS FOR GAME 
 export interface GetDetails {
-  id: number;
+  GameDetails: any;
+  id: number | string;
   slug: string;
   name: string;
   name_original: string;

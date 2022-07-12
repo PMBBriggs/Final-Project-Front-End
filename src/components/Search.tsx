@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react"
+import { GetDetails } from "../Models/getDetails";
+import GetGames from "../Services/getGames";
+
 export default function Search(){
+    const [name, setName] = useState ('');
+    const [game, setGames] = useState <GetDetails[]>([]);
+    // const [search, setSearch] = useState ('');
+
+    useEffect(() => {
+        GetGames(name).then(data => {
+          setGames(data);
+        });
+      }, [name]);
+
+
     return(<div className='SearchPage'>
         <div>
             <label htmlFor="searchBox"></label>
