@@ -5,12 +5,15 @@ import { GetDetails } from "../Models/getDetails";
 export default function GetGames(search: string ): Promise<GetDetails[]>{
   // try param as string OR number**
 
+  const apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
+  console.log(apiKey);
+
     // var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     return axios
         .get(`https://api.rawg.io/api/games?page=1&${search}`,{
           
             params: {
-                key: 'fa8485bcb51e4a8dab23493baa1d1ce9',
+                key: apiKey,
                 search: search
                 // everything of the left is how the api takes it querys (key,search)
             }
