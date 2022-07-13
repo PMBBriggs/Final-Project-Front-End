@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import GameDetails from '../Services/getDetails';
 import { GetDetails } from '../Models/getDetails';
 import { useParams } from 'react-router-dom';
+// import { PlatformsEntity } from '../Models/getDetails';
+// import { Platform } from '../Models/getDetails';
 
 
   export default function InfoPage () {
@@ -33,10 +35,13 @@ import { useParams } from 'react-router-dom';
         console.log(games);
         
       }}>console details</button>
-      
+
       <h1>InfoPage</h1>
+
+      {/* Trying to get the platform to show made edits to the models getDetails interface*/}
       <section>{games?.released}</section>
-      {/* <section>{games?.platforms}</section> */}
+      {/* <section>{games?.platforms?.PlatformsEntity?.platform}</section> */}
+      {/* <section>{games?.Platform.name}</section> */}
       {/* <section>{games?.esrb_rating}</section> */}
 
       <h3>{games?.name}</h3>
