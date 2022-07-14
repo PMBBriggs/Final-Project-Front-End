@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GetDetails } from "../Models/getDetails";
+import { GetDetails } from "../models/getDetails";
 
 
 export default function GameDetails(id: number ): Promise<GetDetails>{
