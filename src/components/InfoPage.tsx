@@ -4,6 +4,7 @@ import { GetDetails } from '../Models/getDetails';
 import { useParams } from 'react-router-dom';
 // import { PlatformsEntity } from '../Models/getDetails';
 // import { Platform } from '../Models/getDetails';
+import "./infoPage.css";
 
 
   export default function InfoPage () {
@@ -36,6 +37,7 @@ import { useParams } from 'react-router-dom';
         
       }}>console details</button>
 
+
       <h1>InfoPage</h1>
 
       {/* Trying to get the platform to show made edits to the models getDetails interface*/}
@@ -47,10 +49,11 @@ import { useParams } from 'react-router-dom';
       <h3>{games?.name}</h3>
       <section>{games?.description}</section>
       <p>{games?.rating}</p>
+
       <img src= {`${games?.background_image}`} alt="poster" className="poster" />
       <img src= {`${games?.background_image_additional}`} alt="poster" className="poster" />
 
       </div>
   )
-}
 
+}

@@ -1,5 +1,24 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;600&display=swap");
+@keyframes flicker {
+  0%,
+  30%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 10px #fff, 0 0 20px #ffff33,
+      0 0 42px #ffff33, 0 0 48px #ffff33, 0 0 6px #ffff33, 0 0 9px #ffff33;
+  }
+  6%,
+  40%,
+  44%,
+  55%,
+  85% {
+    text-shadow: none;
+  }
 }
-
-
+body {
+  background-color: rgb(0, 0, 0);
+}
