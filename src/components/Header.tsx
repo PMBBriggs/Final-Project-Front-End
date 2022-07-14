@@ -1,17 +1,7 @@
 import React from "react";
 import "../styles/Header.css";
+
 export default function Header() {
-<<<<<<< search-service/component
-    return(<div className='Header'>
-        <h1>Title Name Here.. </h1>
-        <nav>
-            <a href="/">Home</a><br></br>
-            <a href="/search">Search</a>
-            <p>Wishlist</p>
-            <p>Profile</p>
-        </nav>
-     
-=======
   let navRef = React.createRef<HTMLDivElement>();
   /* Open */
   function openNav() {
@@ -26,7 +16,6 @@ export default function Header() {
   return (
     <div className="Header">
       <h1>Gamer Depot</h1>
->>>>>>> main
 
       {/* <!-- The overlay --> */}
       <div ref={navRef} id="myNav" className="overlay">
@@ -40,10 +29,10 @@ export default function Header() {
         </a>
         {/* <!-- Overlay content --> */}
         <div className="overlay-content">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#">Profile</a>
           <a href="#">Wishlist</a>
-          <a href="#">Search</a>
+          <a href="/search">Search</a>
         </div>
       </div>
       {/* <!-- Use any element to open/show the overlay navigation menu --> */}
