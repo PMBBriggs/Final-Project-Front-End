@@ -22,12 +22,13 @@ export default function HomePage(){
     return(<div className='HomePage'>
         <h2>Genre</h2>
         <div className="categoryContainer">
-        {genreRPG.map((game, index) => <div>
+            {/* maps out games from selected genre from dropdown */}
+        {/* {genreRPG.map((game, index) => <div>
                     <h1 key={index}>{game.name}</h1>
                     <img src={game.background_image} alt="poster" className="mainPoster"/>
                     <p> {game.rating}</p>
 
-                </div>)}
+                </div>)} */}
         </div>
 
         <h2>Platform</h2>
