@@ -1,35 +1,45 @@
+import React from "react";
 import "./Header.css";
 export default function Header() {
-  // /* Open */
-  // function openNav() {
-  //   document.getElementById("myNav").style.height = "100%";
-  // }
-  // /* Close */
-  // function closeNav() {
-  //   document.getElementById("myNav").style.height = "0%";
-  // }
-  // return (
-  //   <div className="Header">
-  //     {/* <!-- The overlay --> */}
-  //     <div id="myNav" className="overlay">
-  //       {/* <!-- Button to close the overlay navigation --> */}
-  //       <a
-  //         href="javascript:void(0)"
-  //         className="closebtn"
-  //         onClick={() => closeNav()}
-  //       >
-  //         &times;
-  //       </a>
-  //       {/* <!-- Overlay content --> */}
-  //       <div className="overlay-content">
-  //         <a href="#">About</a>
-  //         <a href="#">Services</a>
-  //         <a href="#">Clients</a>
-  //         <a href="#">Contact</a>
-  //       </div>
-  //     </div>
-  //     {/* <!-- Use any element to open/show the overlay navigation menu --> */}
-  //     <span onClick={() => openNav()}>open</span>
-  //   </div>
-  // );
+  let navRef = React.createRef<HTMLDivElement>();
+  /* Open */
+  function openNav() {
+    console.log("here");
+    console.log(navRef);
+    navRef.current!.style.height = "100%";
+  }
+  /* Close */
+  function closeNav() {
+    navRef.current!.style.height = "0%";
+  }
+  return (
+    <div className="Header">
+      <h1>Gamer Depot</h1>
+
+      <form className="searchbar">Search</form>
+
+      {/* <!-- The overlay --> */}
+      <div ref={navRef} id="myNav" className="overlay">
+        {/* <!-- Button to close the overlay navigation --> */}
+        <a
+          href="javascript:void(0)"
+          className="closebtn"
+          onClick={() => closeNav()}
+        >
+          &times;
+        </a>
+        {/* <!-- Overlay content --> */}
+        <div className="overlay-content">
+          <a href="#">Home</a>
+          <a href="#">Profile</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Advanced Search</a>
+        </div>
+      </div>
+      {/* <!-- Use any element to open/show the overlay navigation menu --> */}
+      <span onClick={() => openNav()}>
+        <img className="hamburgericon" src="bars-solid.svg" />{" "}
+      </span>
+    </div>
+  );
 }
