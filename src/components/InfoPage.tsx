@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import GameDetails from '../Services/getDetails';
-import { GetDetails } from '../Models/getDetails';
+import GameDetails from '../services/getDetails';
+import { GetDetails } from '../models/getDetails';
 import { useParams } from 'react-router-dom';
 
   export default function InfoPage () {

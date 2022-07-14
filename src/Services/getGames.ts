@@ -1,13 +1,15 @@
 import axios from "axios";
-import { GetDetails } from "../Models/getDetails";
+import { GetGames, ResultsEntity } from "../models/getGames";
 
 
-export default function GetGames(search: string ): Promise<GetDetails>{
+
+export default function getGames(search: string ): Promise<ResultsEntity[]>{
   // try param as string OR number**
 
-    // var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
+    var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     return axios
-        .get(`https://api.rawg.io/api/games?page=1&${search}`,{
+        .get<ResultsEntity[]>(`https://api.rawg.io/api/games?`,{
+            // removed template literal - url showed 'search twice'
           
             params: {
                 key: 'fa8485bcb51e4a8dab23493baa1d1ce9',
@@ -17,7 +19,7 @@ export default function GetGames(search: string ): Promise<GetDetails>{
         })
       
         /* .get<Popular>(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=2`) */
-        .then((response) => {return response.data})
+        .then((response) => {return response.data});
 }
 
 // get<GetDetails>(`https://api.rawg.io/api/games/${id} ** Before*

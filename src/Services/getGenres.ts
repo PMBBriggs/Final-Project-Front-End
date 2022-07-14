@@ -2,19 +2,19 @@
 // https://api.rawg.io/api/genres
 
 import axios from "axios";
-import { GetDetails } from "../Models/getDetails";
+import { GetDetails } from "../models/getDetails";
 
 // dont need id?
-export default function GameGenres(id: number ): Promise<GetDetails>{
+export default function GameGenres(genre: string ): Promise<GetDetails>{
   // try param as string OR number**
 
-    // var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
+    var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     return axios
         .get(`https://api.rawg.io/api/genres`,{
           
             params: {
-                key: 'fa8485bcb51e4a8dab23493baa1d1ce9',
-                id: id
+                key: apiKey,
+                genre: genre
                 // everything of the left is how the api takes it querys (key,search)
             }
         })

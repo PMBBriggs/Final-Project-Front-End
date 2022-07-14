@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import GameDetails from '../Services/getDetails'
-import { GetDetails } from '../Models/getDetails'
+import GameDetails from '../services/getDetails'
+import { GetDetails } from '../models/getDetails'
 import { useParams } from 'react-router-dom'
 
 export default function GameCard(game:GetDetails) {
@@ -11,6 +11,8 @@ export default function GameCard(game:GetDetails) {
   //         setGames(data);
   //     });
   // }, []);
+
+  // does game card need to be in the shape of GetGames since it will come up when games are being searched? 
 
   return (
     <div className='Gamecard'>

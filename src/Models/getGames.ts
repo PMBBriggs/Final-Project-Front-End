@@ -28,6 +28,7 @@ export interface ResultsEntity {
 }
 export interface RatingsOrAddedByStatus {
 }
+
 export interface PlatformOrEsrbRating {
   id: number;
   slug: string;

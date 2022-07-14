@@ -3,7 +3,7 @@ export default function Header() {
         <h1>Title Name Here.. </h1>
         <nav>
             <p>Home</p>
-            <p>Search</p>
+            <a href="/search">Search</a>
             <p>Wishlist</p>
             <p>Profile</p>
         </nav>
