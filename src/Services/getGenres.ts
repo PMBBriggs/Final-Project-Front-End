@@ -10,6 +10,7 @@ import GetGames from "../models/getGames";
 export default function getGenres(id: string ): Promise<Result[]>{
   // try param as string OR number**
 
+
     var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     return axios
         .get<GetGames>(`https://api.rawg.io/api/games?`,{
@@ -17,6 +18,7 @@ export default function getGenres(id: string ): Promise<Result[]>{
             params: {
                 key: apiKey,
                 genres: id
+
                 // everything of the left is how the api takes it querys (key,search)
             }
         })

@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 import GetGames from "../models/getGames";
 import { Result } from "../models/getGames";
@@ -53,3 +54,4 @@ export default function Search(){
         </div>
     </div>)
 }
+

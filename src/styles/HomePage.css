@@ -1,3 +1,12 @@
+
 .HomePage .categoryContainer img {
    height: 200px;
 }
+
+ .HomePage .categories {
+  color: #f1f1f1;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+}
+
