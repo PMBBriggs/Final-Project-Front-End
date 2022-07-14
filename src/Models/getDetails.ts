@@ -16,10 +16,11 @@ export interface GetDetails {
   website: string;
   rating: number;
   rating_top: number;
-  ratings: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
-  reactions: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
+  // ratings: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
+  // reactions: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
   added: number;
-  added_by_status: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
+  // added_by_status: PlatformsEntityOrRatingsOrReactionsOrAddedByStatus;
+  // AUTO FILL FROM OLD PLATFORM INTERFACE MIGHT NOT USE
   playtime: number;
   screenshots_count: number;
   movies_count: number;
@@ -42,14 +43,27 @@ export interface GetDetails {
   additions_count: number;
   game_series_count: number;
   esrb_rating: EsrbRating;
-  platforms?: (PlatformsEntityOrRatingsOrReactionsOrAddedByStatus)[] | null;
+  platforms?: (PlatformsEntity)[] | null;
 }
 export interface MetacriticPlatformsEntity {
   metascore: number;
   url: string;
 }
-export interface PlatformsEntityOrRatingsOrReactionsOrAddedByStatus {
+export interface PlatformsEntity {
+  platform: Platform;
+  released_at: string;
+  requirements: Requirements;
 }
+export interface Platform {
+  id: number;
+  slug: string;
+  name: string;
+}
+export interface Requirements {
+  minimum: string;
+  recommended: string;
+}
+
 export interface EsrbRating {
   id: number;
   slug: string;

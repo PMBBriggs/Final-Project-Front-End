@@ -6,7 +6,7 @@ export default function GameDetails(id: number ): Promise<GetDetails>{
   // try param as string OR number**
 
     const apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
-    console.log(apiKey);
+    // console.log(apiKey);
     
     return axios
         .get(`https://api.rawg.io/api/games/${id}`,{
