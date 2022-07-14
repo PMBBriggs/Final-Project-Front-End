@@ -16,8 +16,6 @@ export default function Header() {
     <div className="Header">
       <h1>Gamer Depot</h1>
 
-      <form className="searchbar">Search</form>
-
       {/* <!-- The overlay --> */}
       <div ref={navRef} id="myNav" className="overlay">
         {/* <!-- Button to close the overlay navigation --> */}
@@ -33,12 +31,12 @@ export default function Header() {
           <a href="#">Home</a>
           <a href="#">Profile</a>
           <a href="#">Wishlist</a>
-          <a href="#">Advanced Search</a>
+          <a href="#">Search</a>
         </div>
       </div>
       {/* <!-- Use any element to open/show the overlay navigation menu --> */}
       <span onClick={() => openNav()}>
-        <img className="hamburgericon" src="bars-solid.svg" />{" "}
+        <i className="fa-solid fa-bars"></i>
       </span>
     </div>
   );
