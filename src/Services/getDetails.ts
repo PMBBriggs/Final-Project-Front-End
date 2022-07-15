@@ -1,15 +1,15 @@
 import axios from "axios";
-import { GetDetails } from "../models/getDetails";
+import GetDetails from "../models/getDetails";
 
 
-export default function GameDetails(id: number ): Promise<GetDetails>{
+export default function GameDetails(id: string ): Promise<GetDetails>{
   // try param as string OR number**
 
     const apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
     // console.log(apiKey);
     
     return axios
-        .get(`https://api.rawg.io/api/games/${id}`,{
+        .get<GetDetails>(`https://api.rawg.io/api/games/${id}`,{
           // ${id}^ NEED
             params: {
                 key: apiKey,

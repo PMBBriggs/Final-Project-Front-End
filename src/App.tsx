@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/infopage" element={<InfoPage />} />
+          <Route path="/infopage/:id" element={<InfoPage />} />
           <Route path="/search" element={<Search />} />
         </Routes>
       </Router>

@@ -11,11 +11,17 @@ export default function Search(){
     const [games, setGames] = useState <Result[]>([]);
     // const [search, setSearch] = useState ('');
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     getGames(name).then((data) => {
+    //       setGames(data);
+    //     });
+    //   }, [name]);
+
+    function search(name: string) {
         getGames(name).then((data) => {
-          setGames(data);
+            setGames(data);
         });
-      }, [name]);
+    }
    
 
 
@@ -26,7 +32,7 @@ export default function Search(){
         <div>
             <form onSubmit={(e) => {
                 e.preventDefault();
-                setName(name);
+                search(name);
             }}>
                 <label htmlFor="searchBox"></label>
                 <input type='text' id="searchBox" placeholder="search game..." defaultValue={name} onChange={(e) => {setName(e.target.value)}}/>
