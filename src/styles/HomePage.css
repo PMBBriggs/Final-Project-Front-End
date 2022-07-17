@@ -9,4 +9,15 @@
   font-weight: 300;
   font-size: 50px;
 }
+ .HomePage h1 {
+   color: #f1f1f1;
+   font-family: "Teko", sans-serif;
+   font-weight: 300;
+   font-size: 50px;
+ }
+
+ .HomePage p {
+   color: #f1f1f1;
+   font-family: "Teko", sans-serif;
+ }
 

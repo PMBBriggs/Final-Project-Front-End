@@ -31,22 +31,23 @@ export default function Header() {
     <div>
       <div className="Header">
         <h1 className="logo">Gamer Depot</h1>
-
-        <input
-          placeholder="Search...."
-          className="searchBar"
-          id="searchbar"
-          type="text"
-          onChange={(e) => {
-            setSearchInput(e.target.value);
-          }}
-          value={searchInput}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              search(searchInput);
-            }
-          }}
-        />
+        <div>
+          <input
+            placeholder="Search...."
+            className="searchBar"
+            id="searchbar"
+            type="text"
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
+            value={searchInput}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                search(searchInput);
+              }
+            }}
+          />
+        </div>
 
         {/* <!-- The overlay --> */}
         <div ref={navRef} id="myNav" className="overlay">
