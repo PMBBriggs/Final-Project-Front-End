@@ -1,13 +1,13 @@
-// GETTING LIST OF DETAILS FOR GAME 
+// GETTING LIST OF DETAILS FOR GAME
 export interface GetDetails {
   GameDetails: any;
   id: number | string;
   slug: string;
   name: string;
   name_original: string;
-  description: string;
+  description: string | undefined;
   metacritic: number;
-  metacritic_platforms?: (MetacriticPlatformsEntity)[] | null;
+  metacritic_platforms?: MetacriticPlatformsEntity[] | null;
   released: string;
   tba: boolean;
   updated: string;
@@ -37,13 +37,13 @@ export interface GetDetails {
   reviews_text_count: string;
   ratings_count: number;
   suggestions_count: number;
-  alternative_names?: (string)[] | null;
+  alternative_names?: string[] | null;
   metacritic_url: string;
   parents_count: number;
   additions_count: number;
   game_series_count: number;
   esrb_rating: EsrbRating;
-  platforms?: (PlatformsEntity)[] | null;
+  platforms?: PlatformsEntity[] | null;
 }
 export interface MetacriticPlatformsEntity {
   metascore: number;

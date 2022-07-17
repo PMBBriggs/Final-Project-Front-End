@@ -3,3 +3,15 @@
   font-weight: 300;
   color: #f1f1f1;
 }
+section {
+  width: 600px;
+}
+img {
+  width: 450px;
+  height: 500px;
+}
+
+.gameInfo {
+  font-size: 20px;
+  margin-left: 20px;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import GameDetails from "../Services/getDetails";
-import { GetDetails } from "../Models/getDetails";
+import GameDetails from "../services/getDetails";
+import { GetDetails } from "../models/getDetails";
 import { useParams } from "react-router-dom";
 // import { PlatformsEntity } from '../Models/getDetails';
 // import { Platform } from '../Models/getDetails';
@@ -41,14 +41,14 @@ export default function InfoPage() {
       <h1>Info Page</h1>
 
       {/* Trying to get the platform to show made edits to the models getDetails interface*/}
-      <section>{games?.released}</section>
+      <section className="gameInfo">{games?.released}</section>
       {/* <section>{games?.platforms?.PlatformsEntity?.platform}</section> */}
       {/* <section>{games?.Platform.name}</section> */}
       {/* <section>{games?.esrb_rating}</section> */}
 
-      <h3>{games?.name}</h3>
-      <section>{games?.description}</section>
-      <p>{games?.rating}</p>
+      <h3 className="gameInfo">{games?.name}</h3>
+      <section className="gameInfo">{games?.description}</section>
+      <p className="gameInfo">{games?.rating}</p>
 
       <img src={`${games?.background_image}`} alt="poster" className="poster" />
       <img
