@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GameDetails from "../services/getDetails";
-import GetDetails from "../models/getDetails";
+import GetDetails from "../models/Details";
 import { useParams } from "react-router-dom";
 // import { PlatformsEntity } from '../Models/getDetails';
 // import { Platform } from '../Models/getDetails';
@@ -48,7 +48,6 @@ export default function InfoPage() {
       <h3>{games?.name}</h3>
       <section>{games?.description_raw}</section>
       <p>{games?.rating}</p>
-
 
       <img src={`${games?.background_image}`} alt="poster" className="poster" />
       <img

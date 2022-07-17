@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import GetGames from "../models/getGames";
-import { Result } from "../models/getGames";
+import GetGames from "../models/Games";
+import { Result } from "../models/Games";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
 

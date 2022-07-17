@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import GetGames from "../models/getGames";
-import { Result } from "../models/getGames";
+import GetGames from "../models/Games";
+import { Result } from "../models/Games";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
-
 
 export default function Search() {
   const [name, setName] = useState("");
@@ -15,32 +14,12 @@ export default function Search() {
       setGames(data);
     });
   }, [name]);
-
   return (
     <div className="SearchPage">
       {/* <button onClick={() => {
             console.log(name)
         }}>console</button> */}
       <div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setName(name);
-          }}
-        >
-          <label htmlFor="searchBox"></label>
-          <input
-            type="text"
-            id="searchBox"
-            placeholder="search game..."
-            defaultValue={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-          {/* anytime it changes - e.target.value - call get game on submit - pass in names */}
-          <input type="submit" />
-        </form>
         <p className="dropbtn">Advanced Search</p>
         <form id="advDropdown">
           <p>Genre</p>
@@ -61,7 +40,6 @@ export default function Search() {
               <p> {game.rating}</p>
             </div>
           ))}
-          {/* img needs to be link to game card*/}
         </div>
       </div>
     </div>

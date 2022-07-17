@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import GameDetails from '../services/getDetails'
-import GetDetails from '../models/getDetails'
-import { useParams } from 'react-router-dom'
+import GetDetails from "../models/Details";
 
-export default function GameCard(game:GetDetails) {
-  // const [games, setGames] = useState<GetDetails[]>()
-  // const search = useParams ().search
-  // useEffect(() => {
-  //     GameDetails(search!).then(data => {
-  //         setGames(data);
-  //     });
-  // }, []);
+interface GameCardProps {
+  game: GetDetails;
+}
 
-  // does game card need to be in the shape of GetGames since it will come up when games are being searched? 
-
+export default function GameCard({ game }: GameCardProps) {
   return (
-    <div className='Gamecard'>
-      
-      
+    <div className="Gamecard">
+      <p>{game.name}</p>
+      <p>{game.released}</p>
+      <p>{game.description_raw}</p>
+      {/* <p>{game?.parent_platform!.platform.name}</p> */}
+      <p>{game?.esrb_rating!.name}</p>
     </div>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InfoPage from "./components/InfoPage";
 import AdvancedSearch from "./components/AdvancedSearch";
+import Search from "./components/Search";
 
 function App() {
   return (

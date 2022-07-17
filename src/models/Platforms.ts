@@ -1,8 +1,8 @@
+import { Result } from "./Games";
+import GetGames from "./Games";
 import axios from "axios";
-import { Result } from "../models/Games";
-import GetGames from "../models/Games";
 
-export default function getGames(search: string): Promise<Result[]> {
+export default function getPlatforms(id: string): Promise<Result[]> {
   // try param as string OR number**
 
   var apiKey = process.env.REACT_APP_FINAL_API_KEY || "";
@@ -13,7 +13,7 @@ export default function getGames(search: string): Promise<Result[]> {
 
         params: {
           key: apiKey,
-          search: search,
+          platforms: id,
           // everything of the left is how the api takes it querys (key,search)
         },
       })
@@ -24,9 +24,3 @@ export default function getGames(search: string): Promise<Result[]> {
       })
   );
 }
-
-// get<GetDetails>(`https://api.rawg.io/api/games/${id} ** Before*
-
-// https://api.rawg.io/api/games?page=1&key=fa8485bcb51e4a8dab23493baa1d1ce9&search=spyro
-
-// https://api.rawg.io/api/games/57797?page=1&key=fa8485bcb51e4a8dab23493baa1d1ce9
