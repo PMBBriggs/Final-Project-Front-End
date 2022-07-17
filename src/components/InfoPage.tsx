@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GameDetails from "../services/getDetails";
-import { GetDetails } from "../models/getDetails";
+import GetDetails from "../models/getDetails";
 import { useParams } from "react-router-dom";
 // import { PlatformsEntity } from '../Models/getDetails';
 // import { Platform } from '../Models/getDetails';
@@ -13,42 +13,42 @@ export default function InfoPage() {
 
   useEffect(() => {
     // 57797 spyro 57840 tekken
-    GameDetails(3498).then((data) => {
+    GameDetails(id!).then((data) => {
       setGames(data);
     });
   }, []);
 
   // Trying to get the game rating on the info page (esrb rating) is in getGames Models (gameDetails.platform)
-  useEffect(() => {
-    GameDetails(57840).then((data) => {
-      setGamesDetails(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   GameDetails(57840).then((data) => {
+  //     setGamesDetails(data);
+  //   });
+  // }, []);
 
   //   getDetails(id!).then(data => setGames(data));
   //  }, []);
 
   return (
     <div className="infoPage">
-      <button
+      {/* <button
         onClick={() => {
           console.log(games);
         }}
       >
         console details
-      </button>
+      </button> */}
+      {/* button to check json details from API */}
 
       <h1>Info Page</h1>
 
       {/* Trying to get the platform to show made edits to the models getDetails interface*/}
-      <section className="gameInfo">{games?.released}</section>
-      {/* <section>{games?.platforms?.PlatformsEntity?.platform}</section> */}
-      {/* <section>{games?.Platform.name}</section> */}
-      {/* <section>{games?.esrb_rating}</section> */}
+      <section>{games?.released}</section>
+      <p>{games?.esrb_rating!.name}</p>
 
-      <h3 className="gameInfo">{games?.name}</h3>
-      <section className="gameInfo">{games?.description}</section>
-      <p className="gameInfo">{games?.rating}</p>
+      <h3>{games?.name}</h3>
+      <section>{games?.description_raw}</section>
+      <p>{games?.rating}</p>
+
 
       <img src={`${games?.background_image}`} alt="poster" className="poster" />
       <img
@@ -57,5 +57,6 @@ export default function InfoPage() {
         className="poster"
       />
     </div>
+    // tie to game card by making <a href={`/infopage/${games.id}`}></a> around img
   );
 }

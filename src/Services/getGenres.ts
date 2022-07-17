@@ -2,7 +2,7 @@
 // https://api.rawg.io/api/genres
 
 import axios from "axios";
-import { GetDetails } from "../models/getDetails";
+import GetDetails from "../models/getDetails";
 import { Result } from "../models/getGames";
 import GetGames from "../models/getGames";
 

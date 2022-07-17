@@ -13,7 +13,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/infopage" element={<InfoPage />} />
+          <Route path="/infopage/:id" element={<InfoPage />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/Advanced-Search" element={<AdvancedSearch />} />
         </Routes>
       </Router>

@@ -4,6 +4,7 @@ import { Result } from "../models/getGames";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
 
+
 export default function Search() {
   const [name, setName] = useState("");
   const [games, setGames] = useState<Result[]>([]);
