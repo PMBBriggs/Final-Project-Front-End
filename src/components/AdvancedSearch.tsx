@@ -4,8 +4,7 @@ import { Result } from "../models/getGames";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
 
-
-export default function Search() {
+export default function AdvancedSearch() {
   const [name, setName] = useState("");
   const [games, setGames] = useState<Result[]>([]);
   // const [search, setSearch] = useState ('');
@@ -39,7 +38,6 @@ export default function Search() {
             }}
           />
           {/* anytime it changes - e.target.value - call get game on submit - pass in names */}
-          <input type="submit" />
         </form>
         <p className="dropbtn">Advanced Search</p>
         <form id="advDropdown">

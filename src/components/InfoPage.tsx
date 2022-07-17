@@ -49,6 +49,7 @@ export default function InfoPage() {
       <section>{games?.description_raw}</section>
       <p>{games?.rating}</p>
 
+
       <img src={`${games?.background_image}`} alt="poster" className="poster" />
       <img
         src={`${games?.background_image_additional}`}

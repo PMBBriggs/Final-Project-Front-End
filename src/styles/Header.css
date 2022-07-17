@@ -1,13 +1,13 @@
 i {
-  font-size: 35px;
+  font-size: 30px;
   color: #f1f1f1;
   margin-right: 10px;
   margin-top: 13px;
   margin-right: 20px;
 }
 
-.Header h1 {
-  font-size: 40px;
+.logo {
+  font-size: 35px;
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   animation: flicker 3s infinite alternate;
@@ -18,8 +18,23 @@ i {
 .Header {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-
+.searchBar {
+  width: 125px;
+  height: 20px;
+  border-radius: 30px;
+  margin-top: 15px;
+  background-color: rgb(63, 63, 63);
+  border: rgb(63, 63, 63) solid 1px;
+  color: #f1f1f1;
+}
+.searchResults {
+  justify-content: center;
+}
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
