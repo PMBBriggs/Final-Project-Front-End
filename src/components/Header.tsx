@@ -27,8 +27,9 @@ export default function Header() {
   return (
     <div className="Header">
       <h1 className="logo">Gamer Depot</h1>
-      <div>
+      <form action="/search">
         <input
+          name="query"
           placeholder="Search...."
           className="searchBar"
           id="searchbar"
@@ -43,7 +44,7 @@ export default function Header() {
             }
           }}
         />
-      </div>
+      </form>
 
       {/* <!-- The overlay --> */}
       <div ref={navRef} id="myNav" className="overlay">

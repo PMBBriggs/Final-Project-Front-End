@@ -1,11 +1,29 @@
-.SearchPage .searchResultsContainer .mainPoster {
-  height: 200px;
-}
-
-.SearchPage h1 {
+.SearchPage {
+  margin-top: 80px;
   color: white;
   font-family: "Teko", sans-serif;
+}
+.mainPoster {
+  height: 200px;
+  width: 350px;
+  margin-left: 15px;
+}
+.SearchPage .subcategories {
+  font-family: "Teko", sans-serif;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 20px;
   margin-bottom: 0px;
+}
+.advancedSearch {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+label {
+  margin-left: 5px;
+}
+.dropbtn {
+  margin-left: 15px;
+  font-size: 20px;
 }
