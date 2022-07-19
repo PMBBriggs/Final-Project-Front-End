@@ -37,7 +37,7 @@ export default function Search() {
               <a href="#">Fighting</a>
               <a href="#">First Person Shooter</a>
               <a href="#">Real-Time Strategy</a>
-              <a href="#">Role-Playing</a>
+              < href="#">Role-Playing</>
             </div>
             <a href="#">Simulation</a>
           </div>
