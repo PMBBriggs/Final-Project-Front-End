@@ -2,29 +2,31 @@
 // https://api.rawg.io/api/genres
 
 import axios from "axios";
-import GetDetails from "../models/getDetails";
-import { Result } from "../models/getGames";
-import GetGames from "../models/getGames";
+import GetDetails from "../models/Details";
+import { Result } from "../models/Games";
+import GetGames from "../models/Games";
 
 // dont need id?
-export default function getGenres(id: string ): Promise<Result[]>{
+export default function getGenres(id: string): Promise<Result[]> {
   // try param as string OR number**
 
+  var apiKey = process.env.REACT_APP_FINAL_API_KEY || "";
+  return (
+    axios
+      .get<GetGames>(`https://api.rawg.io/api/games?`, {
+        params: {
+          key: apiKey,
+          genres: id,
 
-    var apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
-    return axios
-        .get<GetGames>(`https://api.rawg.io/api/games?`,{
-          
-            params: {
-                key: apiKey,
-                genres: id
+          // everything of the left is how the api takes it querys (key,search)
+        },
+      })
 
-                // everything of the left is how the api takes it querys (key,search)
-            }
-        })
-      
-        /* .get<Popular>(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=2`) */
-        .then((response) => {return response.data.results})
+      /* .get<Popular>(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=2`) */
+      .then((response) => {
+        return response.data.results;
+      })
+  );
 }
 
 // get<GetDetails>(`https://api.rawg.io/api/games/${id} ** Before*

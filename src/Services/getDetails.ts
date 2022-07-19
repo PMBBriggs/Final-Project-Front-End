@@ -1,25 +1,28 @@
 import axios from "axios";
-import GetDetails from "../models/getDetails";
+import GetDetails from "../models/Details";
 
-
-export default function GameDetails(id: string ): Promise<GetDetails>{
+export default function GameDetails(id: string): Promise<GetDetails> {
   // try param as string OR number**
 
-    const apiKey = process.env.REACT_APP_FINAL_API_KEY|| "";
-    // console.log(apiKey);
-    
-    return axios
-        .get<GetDetails>(`https://api.rawg.io/api/games/${id}`,{
-          // ${id}^ NEED
-            params: {
-                key: apiKey,
-                id: id
-                // everything of the left is how the api takes it querys (key,search)
-            }
-        })
-      
-        /* .get<Popular>(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=2`) */
-        .then((response) => {return response.data})
+  const apiKey = process.env.REACT_APP_FINAL_API_KEY || "";
+  // console.log(apiKey);
+
+  return (
+    axios
+      .get<GetDetails>(`https://api.rawg.io/api/games/${id}`, {
+        // ${id}^ NEED
+        params: {
+          key: apiKey,
+          id: id,
+          // everything of the left is how the api takes it querys (key,search)
+        },
+      })
+
+      /* .get<Popular>(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=2`) */
+      .then((response) => {
+        return response.data;
+      })
+  );
 }
 
 // get<GetDetails>(`https://api.rawg.io/api/games/${id} ** Before*
