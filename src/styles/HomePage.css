@@ -1,23 +1,27 @@
-
 .HomePage .categoryContainer img {
-   height: 200px;
+  height: 200px;
 }
 
- .HomePage .categories {
+.HomePage .categories {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 50px;
 }
- .HomePage h1 {
-   color: #f1f1f1;
-   font-family: "Teko", sans-serif;
-   font-weight: 300;
-   font-size: 50px;
- }
+.HomePage .categoryContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
 
- .HomePage p {
-   color: #f1f1f1;
-   font-family: "Teko", sans-serif;
- }
+.HomePage h1 {
+  color: #f1f1f1;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+}
 
+.HomePage p {
+  color: #f1f1f1;
+  font-family: "Teko", sans-serif;
+}

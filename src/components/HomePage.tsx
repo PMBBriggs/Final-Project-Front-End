@@ -19,6 +19,8 @@ export default function HomePage() {
 
   return (
     <div className="HomePage">
+      <h2 className="categories">Recently Released</h2>
+      <h2 className="categories">Genre</h2>
       <div className="categoryContainer">
         {/* maps out games from selected genre from dropdown */}
         {genreRPG.map((game, index) => (
@@ -35,9 +37,6 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-
-      <h2 className="categories">Recently Released</h2>
-      <h2 className="categories">Genre</h2>
       <h2 className="categories">Platform</h2>
       <h2 className="categories">Upcoming Titles</h2>
     </div>

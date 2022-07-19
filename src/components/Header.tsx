@@ -26,7 +26,9 @@ export default function Header() {
   }
   return (
     <div className="Header">
-      <h1 className="logo">Gamer Depot</h1>
+      <a id="logoHomeButton" href="/">
+        <h1 className="logo">Gamer Depot</h1>
+      </a>
       <form action="/search">
         <input
           name="query"
