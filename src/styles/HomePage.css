@@ -8,10 +8,12 @@
   font-weight: 300;
   font-size: 50px;
 }
+
 .HomePage .categoryContainer {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+  height: 300px;
 }
 
 .HomePage h1 {
@@ -19,6 +21,10 @@
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 50px;
+}
+
+.HomePage button {
+  background: none;
 }
 
 .HomePage p {

@@ -1,17 +1,29 @@
+import { useNavigate } from "react-router-dom";
 import GetDetails from "../models/Details";
+import { Result } from "../models/Games";
 
-interface GameCardProps {
-  game: GetDetails;
-}
+// interface GameCardProps {
+//   game: GetDetails;
+// }
+// { game }: GameCardProps
 
-export default function GameCard({ game }: GameCardProps) {
+export default function GameCard(game : Result) {
+  const navigate = useNavigate();
+
+  function goToGameCard(game: Result) {
+    navigate(`/infopage/${game.id}`);
+  }
+
   return (
-    <div className="Gamecard">
+    <div className="Gamecard"  onClick={(e) => {
+      goToGameCard(game);
+    }}>
       <p>{game.name}</p>
-      <p>{game.released}</p>
-      <p>{game.description_raw}</p>
-      {/* <p>{game?.parent_platform!.platform.name}</p> */}
-      <p>{game?.esrb_rating!.name}</p>
+      <img 
+              src={game.background_image}
+              alt="poster"
+              className="mainPoster"
+            />
     </div>
   );
 }

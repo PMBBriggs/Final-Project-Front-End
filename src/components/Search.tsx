@@ -25,36 +25,21 @@ export default function Search() {
         <p className="dropbtn">Advanced Search</p>
 
         {/* <div className="topnav">
-          <div className="dropdown">
-            <button className="dropbtn">
-              Genre
-              <i className="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdown-content container">
-              <a href="#">Action</a>
-              <a href="#">Adventure</a>
-              <a href="#">Battle Royale</a>
-              <a href="#">Fighting</a>
-              <a href="#">First Person Shooter</a>
-              <a href="#">Real-Time Strategy</a>
-              < href="#">Role-Playing</>
-            </div>
-            <a href="#">Simulation</a>
-          </div>
+          
           <div className="dropdown">
             <button className="dropbtn">
               Platform
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content container">
-              <a href="#">Nintendo Switch</a>
-              <a href="#">PC</a>
-              <a href="#">PlayStation</a>
-              <a href="#">XBOX</a>
-              <a href="#">Game Cube</a>
-              <a href="#">Nintendo 64</a>
-              <a href="#">Gameboy</a>
-              <a href="#">Nintendo DS</a>
+              <p>Nintendo Switch</p>
+              <p>PC</p>
+              <p>PlayStation</p>
+              <p>XBOX</p>
+              <p>Game Cube</p>
+              <p>Nintendo 64</p>
+              <p>Gameboy</p>
+              <p>NES</p>
             </div>
           </div>
           <div className="dropdown">
