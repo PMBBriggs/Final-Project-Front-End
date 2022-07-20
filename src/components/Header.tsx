@@ -31,11 +31,11 @@ export default function Header() {
       </a>
       <form action="/search">
         <input
+          type="text"
           name="query"
           placeholder="Search...."
           className="searchBar"
           id="searchbar"
-          type="text"
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}
@@ -50,7 +50,6 @@ export default function Header() {
 
       {/* <!-- The overlay --> */}
       <div ref={navRef} id="myNav" className="overlay">
-        {/* <!-- Button to close the overlay navigation --> */}
         <a
           href="javascript:void(0)"
           className="closebtn"
@@ -58,15 +57,26 @@ export default function Header() {
         >
           &times;
         </a>
-        {/* <!-- Overlay content --> */}
+
         <div className="overlay-content">
-          <a href="/">Home</a>
-          <a href="#">Profile</a>
-          <a href="#">Wishlist</a>
-          <a href="/search">Advanced Search</a>
+          <a href="/">
+            {" "}
+            <i className="fa-solid fa-house"></i>Home
+          </a>
+          <a href="/profile">
+            {" "}
+            <i className="fa-solid fa-user"></i>Profile
+          </a>
+          <a href="#">
+            {" "}
+            <i className="fa-solid fa-bookmark"></i>Wishlist
+          </a>
+          <a href="/search">
+            {" "}
+            <i className="fa-solid fa-magnifying-glass"></i>Search
+          </a>
         </div>
       </div>
-      {/* <!-- Use any element to open/show the overlay navigation menu --> */}
       <span onClick={() => openNav()}>
         <i className="fa-solid fa-bars"></i>
       </span>

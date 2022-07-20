@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import GameDetails from "../services/getDetails";
-import GetDetails from "../models/Details";
 import { useParams } from "react-router-dom";
-// import { PlatformsEntity } from '../Models/getDetails';
-// import { Platform } from '../Models/getDetails';
 import "../styles/infoPage.css";
+import GetDetails from "../models/Details";
 
 export default function InfoPage() {
   const [games, setGames] = useState<GetDetails>();

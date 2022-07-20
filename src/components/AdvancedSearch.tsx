@@ -39,7 +39,7 @@ export default function AdvancedSearch() {
           />
           {/* anytime it changes - e.target.value - call get game on submit - pass in names */}
         </form>
-        <p className="dropbtn">Advanced Search</p>
+        <p className="advancedSearchTitle">Advanced Search</p>
         <form id="advDropdown">
           <p>Genre</p>
           <p>Platform</p>
