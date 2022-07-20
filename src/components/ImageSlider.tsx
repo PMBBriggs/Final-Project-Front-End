@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Slide, SliderData } from "./SliderData";
+import '../styles/ImageSlider.css'
 
 
 export default function ImageSlider() {

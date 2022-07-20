@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <div>
-        <h1>Creators Picks!</h1>
+        <h1 id="creatorTitle">Creators Picks!</h1>
         <ImageSlider/>
         
       </div>

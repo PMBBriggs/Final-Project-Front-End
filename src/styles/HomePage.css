@@ -2,6 +2,12 @@
   height: 200px;
 }
 
+#creatorTitle {
+  margin: 40px 0px 0px 10px;
+  height: 35px;
+  font-size: 45px;
+}
+
 .HomePage .categories {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
@@ -21,6 +27,7 @@
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 50px;
+  margin: 10px 10px;
 }
 
 .HomePage button {
