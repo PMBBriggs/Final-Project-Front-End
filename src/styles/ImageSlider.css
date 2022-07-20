@@ -1,0 +1,14 @@
+.ImageSlider {
+    width: 90vw;
+}
+
+.ImageSlider img{
+    height:200px;
+    width: 300px;
+}
+
+.ImageSlider .slide {
+    height: 200px;
+    margin: 0;
+   }
+
