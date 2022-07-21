@@ -62,7 +62,7 @@ export default function Header() {
         <div className="overlay-content">
           <a href="/">Home</a>
           <a href="#">Profile</a>
-          <a href="#">Wishlist</a>
+          <a href="/Wish-List">Wishlist</a>
           <a href="/search">Advanced Search</a>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Result } from "../models/Games";
 import getGenres from "../services/getGenres";
 import "../styles/HomePage.css";
+import GameCard from "./GameCard";
 
 export default function HomePage() {
   const [genreRPG, setGenreRPG] = useState<Result[]>([]);
@@ -25,15 +26,7 @@ export default function HomePage() {
         {/* maps out games from selected genre from dropdown */}
         {genreRPG.map((game, index) => (
           <div>
-            <h1 className="nameOfGame" key={index}>
-              {game.name}
-            </h1>
-            <img
-              src={game.background_image}
-              alt="poster"
-              className="mainPoster"
-            />
-            <p> Rating: {game.rating}</p>
+            <GameCard {...game}/>
           </div>
         ))}
       </div>

@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { createWatchCompilerHost } from "typescript";
+import WishListContext from "../context/WishListContext";
 import GetDetails from "../models/Details";
 import { Result } from "../models/Games";
+import GameCard from "./GameCard";
 
 export default function Wishlist() {
   const [games, setGames] = useState<Result[]>([]);
   const navigate = useNavigate();
-  function goToGameCard(game: Result) {
-    navigate(`/infopage/${game.id}`);
-  }
+
+  const { wishlist } = useContext(WishListContext);
+
+  // function goToGameCard(game: Result) {
+  //   navigate(`/infopage/${game.id}`);
+  // }
 
   return (
     <div className="wishListContainer">
-      {games.map((game, index) => (
+      <h1>Wish List</h1>
+      <div className="gameSection">
+        {wishlist.map((game,index) => 
+          <GameCard {...game}/>
+        )}
+      </div>
+      {/* {games.map((game, index) => (
         <div
           onClick={(e) => {
             goToGameCard(game);
@@ -27,7 +39,7 @@ export default function Wishlist() {
             className="mainPoster"
           />
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

@@ -3,24 +3,20 @@ import WishListContext from "../context/WishListContext";
 import GetDetails from "../models/Details";
 import GetGames, { Result } from "../models/Games";
 
-interface GameCardProps {
-  game: GetDetails;
-  games: Result;
-}
+// interface GameCardProps {
+//   game: GetDetails;
+//   games: Result;
+// }
 
-export default function GameCard({ game, games }: GameCardProps) {
-  const { isWish, addToWishList, removeFromWishList } =
+export default function GameCard(game : Result) {
+  const {wishlist, addToWishList, removeFromWishList } =
     useContext(WishListContext);
 
   // const [games, setGames] = useState<Result[]>([]);
   return (
     <div className="Gamecard">
       <p>{game.name}</p>
-      <p>{game.released}</p>
-      <p>{game.description_raw}</p>
-      {/* <p>{game?.parent_platform!.platform.name}</p> */}
-      <p>{game?.esrb_rating!.name}</p>
-
+      <img src={game.background_image}></img>
       {/* <div> from davids project
         <button
           className="heart"
@@ -38,17 +34,23 @@ export default function GameCard({ game, games }: GameCardProps) {
         </button>
       </div> */}
 
-      {isWish(games?.id) ? (
-        <i
-          className="fa-solid fa-heart"
-          onClick={() => removeFromWishList(games?.id)}
-        ></i>
-      ) : (
+      
         <i
           className="fa-regular fa-heart"
-          onClick={() => addToWishList(games)}
+          onClick={() => {
+            
+            addToWishList(game);
+            console.log(wishlist);
+          }}
         ></i>
-      )}
+        <i
+          className="fa-solid fa-heart"
+          onClick={() => {
+            // console.log(game);
+            removeFromWishList(game?.id)}}
+        ></i>
+     
+      
     </div>
   );
 }
