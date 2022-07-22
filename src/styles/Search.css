@@ -8,6 +8,10 @@
   width: 350px;
   margin-left: 15px;
 }
+.gameRating {
+  margin-left: 15px;
+  margin-top: 0;
+}
 .SearchPage .subcategories {
   font-family: "Teko", sans-serif;
   font-weight: 300;
@@ -15,9 +19,8 @@
   margin-bottom: 0px;
 }
 .advancedSearch {
-  border: 1px solid white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 label {
@@ -26,4 +29,21 @@ label {
 .dropbtn {
   margin-left: 15px;
   font-size: 20px;
+  height: 30px;
+  width: 135px;
+  font-family: "Teko", sans-serif;
+  background: none;
+  color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 30px;
+}
+.filterSection {
+  color: #ffffff;
+  margin-top: 30px;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
 }
