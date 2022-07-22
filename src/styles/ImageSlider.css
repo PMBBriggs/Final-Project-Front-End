@@ -1,11 +1,9 @@
 .ImageSlider {
-    width: 300px;
+  width: 300px;
+  margin-left: 15px;
 }
 
-.ImageSlider img{
-    height:200px;
-    width: 300px;
+.ImageSlider img {
+  height: 200px;
+  width: 300px;
 }
-
-
-

@@ -1,5 +1,5 @@
-import { Result } from "./Games";
-import GetGames from "./Games";
+import { Result } from "../models/Games";
+import GetGames from "../models/Games";
 import axios from "axios";
 
 export default function getPlatforms(id: string): Promise<Result[]> {
