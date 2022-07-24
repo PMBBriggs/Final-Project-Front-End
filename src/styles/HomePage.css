@@ -1,3 +1,7 @@
+.HomePage{
+  margin: 15px;;
+}
+
 .HomePage .categoryContainer img {
   height: 200px;
 }
@@ -39,4 +43,27 @@
 .HomePage p {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
+}
+
+/* scrollbar styling */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  width: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

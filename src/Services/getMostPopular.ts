@@ -2,7 +2,7 @@ import { Result } from "../models/Games";
 import GetGames from "../models/Games";
 import axios from "axios";
 
-export default function getPlatforms(id: string): Promise<Result[]> {
+export default function getMostPopular(dates: string): Promise<Result[]> {
 
   var apiKey = process.env.REACT_APP_FINAL_API_KEY || "";
   return (
@@ -11,7 +11,8 @@ export default function getPlatforms(id: string): Promise<Result[]> {
 
         params: {
           key: apiKey,
-          platforms: id,
+          dates: dates,
+          ordering: "-added"
           // everything of the left is how the api takes it querys (key,search)
         },
       })

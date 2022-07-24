@@ -1,19 +1,28 @@
+.Header {
+  height: 55px;
+}
+
 i {
   font-size: 25px;
-  color: #f1f1f1;
+  color:#B2F8FB;
+  text-shadow: 0 2px 15px #2158fc;
   margin-right: 10px;
   margin-top: 13px;
   margin-right: 20px;
 }
 
+.Header form{
+  text-align: center;
+}
+
 .logo {
-  font-size: 35px;
+  font-size: 30px;
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   animation: flicker 3s infinite alternate;
-  margin-top: 5px;
-  margin-left: 15px;
+  margin: 8px 2px 5px 15px;
 }
+
 #logoHomeButton {
   text-decoration: none;
 }
@@ -28,19 +37,21 @@ i {
   color: #f1f1f1;
   background-color: black;
   height: 65px;
+  box-shadow: 0 0 20px #6A97B8;
 }
 .Header ::placeholder {
   font-family: "Teko", sans-serif;
   font-size: 15px;
+  color: #fffefe;
 }
 .searchBar {
-  width: 125px;
-  height: 20px;
+  width: 60%;
   border-radius: 30px;
   margin-top: 15px;
+  padding: 5px 15px;
   background-color: rgb(63, 63, 63);
-  border: rgb(63, 63, 63) solid 1px;
-  color: #f1f1f1;
+  border: 1px solid #fffefe;
+  box-shadow: 0 0 10px yellow;
 }
 
 .searchResults {
@@ -75,7 +86,8 @@ i {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #c2c2c2;
+  text-shadow: 0 0 20px yellow;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -84,6 +96,7 @@ i {
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
+  text-shadow: 0 0 20px #d25486;
 }
 
 /* Position the close button (top right corner) */
@@ -105,3 +118,7 @@ i {
     right: 35px;
   }
 }
+
+/* @media screen and (min-width: 600px) {
+
+} */

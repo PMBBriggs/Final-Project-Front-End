@@ -5,12 +5,17 @@ import getGenres from "../services/getGenres";
 import "../styles/HomePage.css";
 import GameCard from "./GameCard";
 import ImageSlider from "./ImageSlider";
+import getMostPopular from "../services/getMostPopular";
+import getUpcoming from "../services/getUpcoming";
+import Footer from "./Footer";
 
 export default function HomePage() {
   const [show, setShow] = useState(false);
   const [genre, setGenre] = useState<Result[]>([]);
-  const [platform, setPlatform] = useState<Result[]>();
-  // genres take id
+  const [platform, setPlatform] = useState<Result[]>([]);
+  const [popular,setPopular] = useState<Result[]>([]);
+  const [upcoming,setUpcoming] = useState<Result[]>([]);
+
 
   useEffect(() => {
     getGenres("40").then((data) => {
@@ -20,6 +25,14 @@ export default function HomePage() {
     getPlatforms("4").then((data) => {
       setPlatform(data);
     });
+
+    getMostPopular("2021-01-01,2021-12-31").then((data) => {
+      setPopular(data);
+    })
+
+    getUpcoming("2022-08-01,2022-12-31").then((data) => {
+      setUpcoming(data);
+    })
   }, []);
 
   function genreSelection(id: string) {
@@ -40,7 +53,15 @@ export default function HomePage() {
         <h1 id="creatorTitle">Creators Picks!</h1>
         <ImageSlider />
       </div>
-      <h2 className="categories">Most Popular</h2>
+      <h2 className="categories">2021 Most Popular</h2>
+      <div className="categoryContainer">
+        {/* maps out games from selected genre from dropdown */}
+        {popular.map((game, index) => (
+          <div>
+            <GameCard {...game} />
+          </div>
+        ))}
+      </div>
       <div className="dropdown">
         <button
           className="dropbtn categories"
@@ -218,6 +239,15 @@ export default function HomePage() {
         ))}
       </div>
       <h2 className="categories">Upcoming Titles</h2>
+      <div className="categoryContainer">
+        {/* maps out games from selected genre from dropdown */}
+        {upcoming.map((game, index) => (
+          <div>
+            <GameCard {...game} />
+          </div>
+        ))}
+      </div>
+      <Footer/>
     </div>
   );
 }

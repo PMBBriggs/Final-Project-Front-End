@@ -46,6 +46,7 @@ export default function Search() {
         >
           <div className="filterSection">
             <div className="platformFilters">
+              <p>Platforms</p>
               <input
                 id="PC"
                 type="checkbox"
@@ -118,6 +119,7 @@ export default function Search() {
             </div>
 
             <div className="genreFilters">
+              <p>Genres</p>
               <input
                 id="Action"
                 type="checkbox"
@@ -210,6 +212,7 @@ export default function Search() {
             </div>
 
             <div className="modeFilters">
+              <p>Mode</p>
               <input
                 id="Single"
                 type="checkbox"

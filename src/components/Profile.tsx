@@ -12,7 +12,7 @@ export default function () {
     <div id="signInDiv">
       {!user ? (
         <button
-          id="signInOutButton"
+          id="signInButton"
           onClick={() => {
             signInWithGoogle();
           }}
@@ -21,7 +21,7 @@ export default function () {
         </button>
       ) : (
         <button
-          id="signInOutButton"
+          id="signOutButton"
           onClick={() => {
             signOut();
           }}
@@ -29,6 +29,7 @@ export default function () {
           Sign Out
         </button>
       )}
+      <div id='profileBorder'>
       {!user ? null : (
         <>
           <div id="welcomeUser">
@@ -38,12 +39,11 @@ export default function () {
           <img className="userPic" src={user?.photoURL as string} />
           <p>Email: {user?.email}</p>
           <p>
-            {" "}
-            My Wishlist
-            <a href="/wishlist"></a>
+            <a href="/wishlist"> My Wishlist</a>
           </p>
         </>
       )}
+      </div>
     </div>
   );
 }

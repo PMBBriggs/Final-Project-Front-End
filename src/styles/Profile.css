@@ -1,29 +1,66 @@
 #signInDiv {
-  margin-top: 50px;
-  align-items: center;
+  text-align: center;
 }
+
+#profileBorder {
+  border: 2px solid rgb(251, 252, 202);
+  border-radius: 20px;
+  margin: 20% 15%;
+  background: none;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.805);
+  /* display block until sign in  */
+}
+
 #welcomeUser {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 0;
 }
 #greeting {
   margin-right: 5px;
 }
-#signInOutButton {
-  float: right;
-  border-radius: 5px;
-  border: none;
-  margin-right: 5px;
-  margin-top: 20px;
+#signInButton {
+  border-radius: 10px;
+  border: 2px solid #B2F8FB;
+  color:#B2F8FB;
+  text-shadow: 0 0 20px #2158fc;
+  background: none;
+  margin-top: 30%;
   font-family: "Teko", sans-serif;
+  font-size: 55px;
+  padding: 0px 20px;
+}
+
+#signOutButton {
+  float: right;
+  margin-right: 5%;
+  border-radius: 8px;
+  border: 2px solid #B2F8FB;
+  color:#B2F8FB;
+  text-shadow: 0 0 20px #2158fc;
+  background: none;
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  /* media query placement */
 }
 .userPic {
   width: 100px;
   height: 100px;
   border: 2px solid white;
-
+  box-shadow: 0 0 15px #6A97B8;
   border-radius: 5%;
 }
 .displayName {
   height: 15px;
+}
+
+#signInDiv a {
+  text-decoration: none;
+  color: white;
+}
+
+#signInDiv a:hover,
+#signInDiv a:focus {
+  text-shadow: 0 0 20px #2158fc;
 }
