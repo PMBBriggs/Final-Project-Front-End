@@ -8,6 +8,7 @@ import AdvancedSearch from "./components/AdvancedSearch";
 import Search from "./components/Search";
 import AuthContextProvider from "./context/AuthContextProvider";
 import Profile from "./components/Profile";
+import AllGamesRoute from "./routes/allGames";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/Advanced-Search" element={<AdvancedSearch />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/wishlist" element={<AllGamesRoute />} />
           </Routes>
         </Router>
       </div>

@@ -32,7 +32,7 @@ export default function InfoPage() {
         />
       </div>
       <section className="gameDescription"> {games?.description_raw}</section>
-      <p>Rated: {games?.esrb_rating!.name}</p>
+      {/* <p>Rated: {games?.esrb_rating!.name}</p> */}
 
       <p>Release Date: {games?.released}</p>
       <p>Rating: {games?.rating}</p>

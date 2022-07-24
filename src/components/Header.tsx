@@ -67,7 +67,7 @@ export default function Header() {
             {" "}
             <i className="fa-solid fa-user"></i>Profile
           </a>
-          <a href="#">
+          <a href="/wishlist">
             {" "}
             <i className="fa-solid fa-bookmark"></i>Wishlist
           </a>
