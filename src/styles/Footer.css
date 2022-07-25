@@ -1,8 +1,10 @@
 .Footer{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
+    margin: 20px 0px 0px 0px;
+    
 }
 
 .Footer i{
@@ -22,15 +24,22 @@
     color: rgb(48, 48, 48);
     border: none;
     border-radius: 30px;
-    width: 200px;
+    width: 150px;
 }
 
 .Footer button{
     background-color: #ffff33;
     border: none;
     border-radius: 10px;
-    padding: 1px 15px;
     font-family: "Teko", sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 15px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+ .Footer .fa-brands{
+    box-shadow: 0 0 15px #7B2246;
+
 }

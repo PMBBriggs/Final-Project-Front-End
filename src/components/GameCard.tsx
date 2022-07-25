@@ -18,7 +18,7 @@ export default function GameCard(game : Result) {
     <div className="Gamecard"  onClick={(e) => {
       goToGameCard(game);
     }}>
-      <p>{game.name}</p>
+      <p className="gameName">{game.name}</p>
       <img 
               src={game.background_image}
               alt="poster"

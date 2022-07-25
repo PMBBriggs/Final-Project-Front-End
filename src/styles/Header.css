@@ -35,7 +35,7 @@ i {
   left: 0;
   right: 0;
   color: #f1f1f1;
-  background-color: black;
+  background-color: #020708;
   height: 65px;
   box-shadow: 0 0 20px #6A97B8;
 }
@@ -50,8 +50,8 @@ i {
   margin-top: 15px;
   padding: 5px 15px;
   background-color: rgb(63, 63, 63);
-  border: 1px solid #fffefe;
-  box-shadow: 0 0 10px yellow;
+  border: 1px solid #ffffd1;
+  box-shadow: 0 0 10px #ffff33;
 }
 
 .searchResults {

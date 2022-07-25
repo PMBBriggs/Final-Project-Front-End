@@ -7,18 +7,37 @@
 }
 
 #creatorTitle {
-  margin: 80px 0px 0px 15px;
-  height: 35px;
-  font-size: 45px;
+  margin: 110px 0px 0px 5px;
+  font-size: 40px;
+  box-shadow: 0 0 10px #0D4383;
+  width: 180px;
+  padding-left: 10px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px rgb(155, 155, 155);
+
 }
 
 .HomePage .categories {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 40px;
   margin-top: 70px;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0D4383;
+  width: 200px;
+  padding-left: 10px;
+}
+
+.HomePage .fa.fa-caret-down{
+  margin: 0px 0px 0px 8px;
+}
+.HomePage button.categories{
+  box-shadow: 0 0 10px #0D4383;
+  border: none;
+  margin-top: 0px 0px 20px 0px;
 }
 
 .HomePage .categoryContainer {
@@ -35,7 +54,10 @@
   font-size: 50px;
   margin: 10px 10px;
 }
-
+.HomePage p{
+  font-size: 30px;
+  margin: 0px 0px 0px 5px;
+}
 .HomePage button {
   background: none;
 }
@@ -45,11 +67,16 @@
   font-family: "Teko", sans-serif;
 }
 
+
+.mostPopularDiv{
+  background-color: bisque;
+}
+
 /* scrollbar styling */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-}
+} 
 
 /* Track */
 ::-webkit-scrollbar-track {
