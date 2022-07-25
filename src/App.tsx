@@ -10,26 +10,30 @@ import Search from "./components/Search";
 import AuthContextProvider from "./context/AuthContextProvider";
 
 import Profile from "./components/Profile";
+import AllGamesRoute from "./routes/allGames";
 import FilterContextProvider from "./context/FilterContextProvider";
 
 function App() {
   return (
     <FilterContextProvider>
-      <AuthContextProvider>
-        <div className="App">
-          <Header />
-          <Router>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/infopage/:id" element={<InfoPage />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
-          </Router>
-          <Footer />
-        </div>
-      </AuthContextProvider>
-    </FilterContextProvider>
+    <AuthContextProvider>
+      <div className="App">
+        <Header />
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/infopage/:id" element={<InfoPage />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/Advanced-Search" element={<AdvancedSearch />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/wishlist" element={<AllGamesRoute />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </div>
+    </AuthContextProvider>
+     </FilterContextProvider>
+
   );
 }
 

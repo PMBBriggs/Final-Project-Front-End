@@ -33,6 +33,7 @@ export default function HomePage() {
     getUpcoming("2022-08-01,2022-12-31").then((data) => {
       setUpcoming(data);
     });
+
   }, []);
 
   function genreSelection(id: string) {
@@ -53,6 +54,7 @@ export default function HomePage() {
         <h1 id="creatorTitle">Creators Picks!</h1>
         <ImageSlider />
       </div>
+
       <h2 className="categories">2021 Most Popular</h2>
       <div className="categoryContainer">
         {/* maps out games from selected genre from dropdown */}
@@ -62,11 +64,14 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+
       <div className="dropdown">
         <button
           className="dropbtn categories"
           onClick={() => {
+
             setShowGenre(!showGenre);
+
           }}
         >
           Genre
@@ -74,12 +79,16 @@ export default function HomePage() {
         </button>
         <div
           className="dropdown-content container"
+
           style={{ display: showGenre === false ? "none" : "block" }}
+
         >
           <p
             onClick={() => {
               genreSelection("4");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Action
@@ -87,7 +96,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("3");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Adventure
@@ -95,7 +106,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("40");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Casual
@@ -103,7 +116,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("6");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Fighting
@@ -111,7 +126,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("1");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Racing
@@ -119,7 +136,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("10");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Real-Time Strategy
@@ -128,6 +147,7 @@ export default function HomePage() {
             onClick={() => {
               genreSelection("5");
               setShowGenre(!showGenre);
+
             }}
           >
             Role-Playing
@@ -135,7 +155,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("14");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Simulation
@@ -143,7 +165,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("15");
+
               setShowGenre(!showGenre);
+
             }}
           >
             Sports
@@ -153,7 +177,9 @@ export default function HomePage() {
       <div className="categoryContainer">
         {/* maps out games from selected genre from dropdown */}
         {genre.map((game, index) => (
-          <div>
+
+          <div key={index}>
+
             <GameCard {...game} />
           </div>
         ))}
@@ -162,7 +188,9 @@ export default function HomePage() {
         <button
           className="dropbtn categories"
           onClick={() => {
+
             setShowPlatform(!showPlatform);
+
           }}
         >
           Platforms
@@ -170,12 +198,16 @@ export default function HomePage() {
         </button>
         <div
           className="dropdown-content container"
+
           style={{ display: showPlatform === false ? "none" : "block" }}
+
         >
           <p
             onClick={() => {
               platformSelection("4");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             PC
@@ -183,7 +215,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("27,15,16,18,187");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             PlayStation
@@ -191,7 +225,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("7");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             Nintendo Switch
@@ -199,7 +235,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("14,80,1");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             Xbox
@@ -207,7 +245,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("83");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             Nintendo 64
@@ -215,7 +255,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("26,43,24");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             Gameboy
@@ -223,7 +265,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("49,79");
+
               setShowPlatform(!showPlatform);
+
             }}
           >
             NES
@@ -233,7 +277,9 @@ export default function HomePage() {
       <div className="categoryContainer">
         {/* maps out games from selected platform from dropdown */}
         {platform?.map((game, index) => (
-          <div>
+
+          <div key={index}>
+
             <GameCard {...game} />
           </div>
         ))}

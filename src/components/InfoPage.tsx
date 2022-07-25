@@ -33,6 +33,7 @@ export default function InfoPage() {
         />
       </div>
       <section className="gameDescription"> {games?.description_raw}</section>
+
       <div className="ratedTagDiv">
         <p className="ratedTag">Rated: </p>
         <p>{games?.esrb_rating!.name}</p>
@@ -45,6 +46,7 @@ export default function InfoPage() {
         <p className="ratingTag">Rating: </p>
         <p> {games?.rating}</p>
       </div>
+
     </div>
     // tie to game card by making <a href={`/infopage/${games.id}`}></a> around img
   );

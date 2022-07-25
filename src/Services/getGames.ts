@@ -1,12 +1,20 @@
 import axios from "axios";
-import { Result } from "../models/Games";
+import Games, { Result } from "../models/Games";
 import GetGames from "../models/Games";
 import { FilterState } from "../models/Filters";
+
+
+const baseUrl = process.env.REACT_APP_FINAL_API_URL;
+
+if (!baseUrl) {
+  console.error("Missing config REACT_APP_FINAL_API_URL");
+}
 
 export default function getGames(
   search: string,
   filters?: FilterState
 ): Promise<Result[]> {
+
   // try param as string OR number**
 
   let platforms = [];
@@ -86,6 +94,24 @@ export default function getGames(
         return response.data.results;
       })
   );
+}
+
+export function fetchAllGames(): Promise<Result[]> {
+  return axios.get<Result[]>(`${baseUrl}/wishlist`).then((res) => res.data);
+}
+
+export function addGame(game: Result): Promise<Result> {
+  console.log("adding a game inside the route");
+
+  return axios
+    .post<Result>(`${baseUrl}/wishlist`, game)
+    .then((response) => response.data);
+}
+
+export function deleteGame(game: Result): Promise<Result> {
+  return axios
+    .delete(`${baseUrl}/wishlist/${game.id}`)
+    .then((response) => response.data);
 }
 
 // get<GetDetails>(`https://api.rawg.io/api/games/${id} ** Before*
