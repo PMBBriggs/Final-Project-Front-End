@@ -14,14 +14,34 @@ img {
 
 .nameOfGame {
   font-size: 25px;
-  text-align: center;
+  margin-bottom: 0px;
 }
 
 .gameInfo {
   font-size: 20px;
   margin-left: 20px;
 }
-
+.ratingDiv {
+  display: flex;
+  flex-direction: row;
+}
+.ratingTag {
+  font-weight: bold;
+}
+.releaseDateDiv {
+  display: flex;
+  flex-direction: row;
+}
+.releaseTag {
+  font-weight: bold;
+}
+.ratedTag {
+  font-weight: bold;
+}
+.ratedTagDiv {
+  display: flex;
+  flex-direction: row;
+}
 .poster {
   width: 350px;
   height: 300px;

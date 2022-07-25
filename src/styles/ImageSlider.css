@@ -1,11 +1,33 @@
 .ImageSlider {
-    width: 300px;
+  margin-left: 5px;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
 }
 
-.ImageSlider img{
-    height:200px;
-    width: 300px;
+.ImageSlider img {
+  width: 350px;
+  height: 200px;
+}
+/* scrollbar styling */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(47, 46, 46);
+  border-radius: 10px;
+  width: 15px;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

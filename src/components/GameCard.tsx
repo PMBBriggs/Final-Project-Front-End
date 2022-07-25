@@ -16,6 +16,7 @@ export default function GameCard(game: Result) {
   }
 
   return (
+
     <div className="Gamecard">
       <p>{game.name}</p>
       <img
@@ -42,6 +43,7 @@ export default function GameCard(game: Result) {
           deleteGame(game);
         }}
       ></i>
+
     </div>
   );
 }

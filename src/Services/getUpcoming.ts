@@ -1,19 +1,18 @@
-import { Result } from "./Games";
-import GetGames from "./Games";
+import { Result } from "../models/Games";
+import GetGames from "../models/Games";
 import axios from "axios";
 
-export default function getPlatforms(id: string): Promise<Result[]> {
-  // try param as string OR number**
+export default function getUpcoming(dates: string): Promise<Result[]> {
 
   var apiKey = process.env.REACT_APP_FINAL_API_KEY || "";
   return (
     axios
       .get<GetGames>(`https://api.rawg.io/api/games?`, {
-        // removed template literal - url showed 'search twice'
 
         params: {
           key: apiKey,
-          platforms: id,
+          dates: dates,
+          ordering: "-added"
           // everything of the left is how the api takes it querys (key,search)
         },
       })

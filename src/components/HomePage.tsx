@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 import { Result } from "../models/Games";
-import getPlatforms from "../models/Platforms";
+import getPlatforms from "../services/Platforms";
 import getGenres from "../services/getGenres";
 import "../styles/HomePage.css";
 import GameCard from "./GameCard";
 import ImageSlider from "./ImageSlider";
+import getMostPopular from "../services/getMostPopular";
+import getUpcoming from "../services/getUpcoming";
+import Footer from "./Footer";
 
 export default function HomePage() {
-  const [show, setShow] = useState(false);
+  const [showGenre, setShowGenre] = useState(false);
+  const [showPlatform, setShowPlatform] = useState(false);
   const [genre, setGenre] = useState<Result[]>([]);
-  const [platform, setPlatform] = useState<Result[]>();
-  // genres take id
+  const [platform, setPlatform] = useState<Result[]>([]);
+  const [popular, setPopular] = useState<Result[]>([]);
+  const [upcoming, setUpcoming] = useState<Result[]>([]);
 
   useEffect(() => {
     getGenres("40").then((data) => {
@@ -20,6 +25,15 @@ export default function HomePage() {
     getPlatforms("4").then((data) => {
       setPlatform(data);
     });
+
+    getMostPopular("2021-01-01,2021-12-31").then((data) => {
+      setPopular(data);
+    });
+
+    getUpcoming("2022-08-01,2022-12-31").then((data) => {
+      setUpcoming(data);
+    });
+
   }, []);
 
   function genreSelection(id: string) {
@@ -40,12 +54,24 @@ export default function HomePage() {
         <h1 id="creatorTitle">Creators Picks!</h1>
         <ImageSlider />
       </div>
-      <h2 className="categories">Most Popular</h2>
+
+      <h2 className="categories">2021 Most Popular</h2>
+      <div className="categoryContainer">
+        {/* maps out games from selected genre from dropdown */}
+        {popular.map((game, index) => (
+          <div>
+            <GameCard {...game} />
+          </div>
+        ))}
+      </div>
+
       <div className="dropdown">
         <button
           className="dropbtn categories"
           onClick={() => {
-            setShow(!show);
+
+            setShowGenre(!showGenre);
+
           }}
         >
           Genre
@@ -53,12 +79,16 @@ export default function HomePage() {
         </button>
         <div
           className="dropdown-content container"
-          style={{ display: show === false ? "none" : "block" }}
+
+          style={{ display: showGenre === false ? "none" : "block" }}
+
         >
           <p
             onClick={() => {
               genreSelection("4");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Action
@@ -66,7 +96,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("3");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Adventure
@@ -74,7 +106,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("40");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Casual
@@ -82,7 +116,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("6");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Fighting
@@ -90,7 +126,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("1");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Racing
@@ -98,7 +136,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("10");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Real-Time Strategy
@@ -106,7 +146,8 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("5");
-              setShow(!show);
+              setShowGenre(!showGenre);
+
             }}
           >
             Role-Playing
@@ -114,7 +155,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("14");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Simulation
@@ -122,7 +165,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               genreSelection("15");
-              setShow(!show);
+
+              setShowGenre(!showGenre);
+
             }}
           >
             Sports
@@ -132,7 +177,9 @@ export default function HomePage() {
       <div className="categoryContainer">
         {/* maps out games from selected genre from dropdown */}
         {genre.map((game, index) => (
+
           <div key={index}>
+
             <GameCard {...game} />
           </div>
         ))}
@@ -141,7 +188,9 @@ export default function HomePage() {
         <button
           className="dropbtn categories"
           onClick={() => {
-            setShow(!show);
+
+            setShowPlatform(!showPlatform);
+
           }}
         >
           Platforms
@@ -149,12 +198,16 @@ export default function HomePage() {
         </button>
         <div
           className="dropdown-content container"
-          style={{ display: show === false ? "none" : "block" }}
+
+          style={{ display: showPlatform === false ? "none" : "block" }}
+
         >
           <p
             onClick={() => {
               platformSelection("4");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             PC
@@ -162,7 +215,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("27,15,16,18,187");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             PlayStation
@@ -170,7 +225,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("7");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             Nintendo Switch
@@ -178,7 +235,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("14,80,1");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             Xbox
@@ -186,7 +245,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("83");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             Nintendo 64
@@ -194,7 +255,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("26,43,24");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             Gameboy
@@ -202,7 +265,9 @@ export default function HomePage() {
           <p
             onClick={() => {
               platformSelection("49,79");
-              setShow(!show);
+
+              setShowPlatform(!showPlatform);
+
             }}
           >
             NES
@@ -212,12 +277,22 @@ export default function HomePage() {
       <div className="categoryContainer">
         {/* maps out games from selected platform from dropdown */}
         {platform?.map((game, index) => (
+
           <div key={index}>
+
             <GameCard {...game} />
           </div>
         ))}
       </div>
       <h2 className="categories">Upcoming Titles</h2>
+      <div className="categoryContainer">
+        {/* maps out games from selected genre from dropdown */}
+        {upcoming.map((game, index) => (
+          <div>
+            <GameCard {...game} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

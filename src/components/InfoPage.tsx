@@ -3,6 +3,7 @@ import GameDetails from "../services/getDetails";
 import { useParams } from "react-router-dom";
 import "../styles/infoPage.css";
 import GetDetails from "../models/Details";
+import Footer from "./Footer";
 
 export default function InfoPage() {
   const [games, setGames] = useState<GetDetails>();
@@ -32,10 +33,20 @@ export default function InfoPage() {
         />
       </div>
       <section className="gameDescription"> {games?.description_raw}</section>
-      {/* <p>Rated: {games?.esrb_rating!.name}</p> */}
 
-      <p>Release Date: {games?.released}</p>
-      <p>Rating: {games?.rating}</p>
+      <div className="ratedTagDiv">
+        <p className="ratedTag">Rated: </p>
+        <p>{games?.esrb_rating!.name}</p>
+      </div>
+      <div className="releaseDateDiv">
+        <p className="releaseTag">Release Date:</p>
+        <p>{games?.released}</p>
+      </div>
+      <div className="ratingDiv">
+        <p className="ratingTag">Rating: </p>
+        <p> {games?.rating}</p>
+      </div>
+
     </div>
     // tie to game card by making <a href={`/infopage/${games.id}`}></a> around img
   );

@@ -2,11 +2,19 @@
   margin-top: 80px;
   color: white;
   font-family: "Teko", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .mainPoster {
   height: 200px;
   width: 350px;
-  margin-left: 15px;
+  margin-left: 5px;
+}
+.gameRating {
+  margin-top: 0;
+  text-align: left;
 }
 .SearchPage .subcategories {
   font-family: "Teko", sans-serif;
@@ -15,15 +23,53 @@
   margin-bottom: 0px;
 }
 .advancedSearch {
-  border: 1px solid white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  margin: 0 20px;
 }
+
+.advancedSearch p {
+  margin-bottom: 3px;
+}
+
 label {
-  margin-left: 5px;
+  margin-right: 5px;
 }
-.dropbtn {
-  margin-left: 15px;
+.SearchPage .dropbtn {
+  margin-top: 15px;
   font-size: 20px;
+  height: 30px;
+  width: 135px;
+  font-family: "Teko", sans-serif;
+  background: none;
+  color: #f1f1f1;
+  border: 1px solid #7b2246;
+  box-shadow: 0 0 20px #7b2246;
+  border-radius: 30px;
+}
+.SearchPage .dropbtn:hover {
+  box-shadow: 0 0 30px #7b2246, 0 0 30px #7b2246;
+}
+.filterSection {
+  color: #ffffff;
+  margin-top: 30px;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+#advDropdown {
+  margin: 0 20px;
+}
+
+.platformFilters {
+  padding: 0px 20px;
+}
+
+.genreFilters {
+  padding: 0px 50px;
 }

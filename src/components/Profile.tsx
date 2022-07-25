@@ -12,7 +12,7 @@ export default function () {
     <div id="signInDiv">
       {!user ? (
         <button
-          id="signInOutButton"
+          id="signInButton"
           onClick={() => {
             signInWithGoogle();
           }}
@@ -21,7 +21,7 @@ export default function () {
         </button>
       ) : (
         <button
-          id="signInOutButton"
+          id="signOutButton"
           onClick={() => {
             signOut();
           }}
@@ -31,17 +31,17 @@ export default function () {
       )}
       {!user ? null : (
         <>
-          <div id="welcomeUser">
-            <p id="greeting"> Welcome, </p>
-            <p className="displayName">{user?.displayName}</p>
+          <div id="profileBorder">
+            <div id="welcomeUser">
+              <p id="greeting"> Welcome, </p>
+              <p className="displayName">{user?.displayName}</p>
+            </div>
+            <img className="userPic" src={user?.photoURL as string} />
+            <p>Email: {user?.email}</p>
+            <p>
+              <a href="/wishlist"> My Wishlist</a>
+            </p>
           </div>
-          <img className="userPic" src={user?.photoURL as string} />
-          <p>Email: {user?.email}</p>
-          <p>
-            {" "}
-            My Wishlist
-            <a href="/wishlist"></a>
-          </p>
         </>
       )}
     </div>

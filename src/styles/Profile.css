@@ -1,29 +1,69 @@
 #signInDiv {
-  margin-top: 50px;
-  align-items: center;
+  text-align: center;
+  height: 100% vh;
 }
+
+#profileBorder {
+  border: 2px solid rgb(251, 252, 202);
+  border-radius: 20px;
+  margin: 20% 15%;
+  background: none;
+  box-shadow: 0 0 10px #ffff33;
+  /* display block until sign in  */
+}
+
 #welcomeUser {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 0;
 }
 #greeting {
   margin-right: 5px;
 }
-#signInOutButton {
-  float: right;
-  border-radius: 5px;
-  border: none;
-  margin-right: 5px;
-  margin-top: 20px;
+#signInButton {
+  border-radius: 10px;
+  border: 2px solid #b2f8fb;
+  box-shadow: 0 0 25px #47a1b6;
+  color: #b2f8fb;
+  text-shadow: 0 0 20px #2158fc;
 
+  background: none;
+  margin-top: 30%;
   font-family: "Teko", sans-serif;
+  font-size: 55px;
+  padding: 0px 20px;
+}
+
+#signOutButton {
+  float: right;
+  border-radius: 10px;
+  border: 2px solid #b2f8fb;
+  box-shadow: 0 0 25px #47a1b6;
+  color: #b2f8fb;
+  text-shadow: 0 0 20px #2158fc;
+  background: none;
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  /* media query placement */
 }
 .userPic {
   width: 100px;
   height: 100px;
-
+  border: 2px solid #f1f1f1;
+  box-shadow: 0 0 40px #7b2246;
   border-radius: 5%;
 }
 .displayName {
   height: 15px;
+}
+
+#signInDiv a {
+  text-decoration: none;
+  color: white;
+}
+
+#signInDiv a:hover,
+#signInDiv a:focus {
+  text-shadow: 0 0 50px #2158fc;
 }
