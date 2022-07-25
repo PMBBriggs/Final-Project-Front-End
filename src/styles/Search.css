@@ -2,6 +2,10 @@
   margin-top: 80px;
   color: white;
   font-family: "Teko", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .mainPoster {
   height: 200px;
@@ -9,8 +13,8 @@
   margin-left: 5px;
 }
 .gameRating {
-  margin-left: 15px;
   margin-top: 0;
+  text-align: left;
 }
 .SearchPage .subcategories {
   font-family: "Teko", sans-serif;
@@ -25,7 +29,7 @@
   margin: 0 20px;
 }
 
-.advancedSearch p{
+.advancedSearch p {
   margin-bottom: 3px;
 }
 
@@ -33,17 +37,20 @@ label {
   margin-right: 5px;
 }
 .SearchPage .dropbtn {
-  margin-left: 15px;
+  margin-top: 15px;
   font-size: 20px;
   height: 30px;
   width: 135px;
   font-family: "Teko", sans-serif;
   background: none;
   color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #7b2246;
+  box-shadow: 0 0 20px #7b2246;
   border-radius: 30px;
 }
-
+.SearchPage .dropbtn:hover {
+  box-shadow: 0 0 30px #7b2246, 0 0 30px #7b2246;
+}
 .filterSection {
   color: #ffffff;
   margin-top: 30px;

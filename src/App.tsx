@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InfoPage from "./components/InfoPage";
 //import AdvancedSearch from "./components/AdvancedSearch";
 import Search from "./components/Search";
 import AuthContextProvider from "./context/AuthContextProvider";
+
 import Profile from "./components/Profile";
 import FilterContextProvider from "./context/FilterContextProvider";
 
@@ -24,6 +26,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
             </Routes>
           </Router>
+          <Footer />
         </div>
       </AuthContextProvider>
     </FilterContextProvider>

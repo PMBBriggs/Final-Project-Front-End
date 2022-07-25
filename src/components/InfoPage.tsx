@@ -3,6 +3,7 @@ import GameDetails from "../services/getDetails";
 import { useParams } from "react-router-dom";
 import "../styles/infoPage.css";
 import GetDetails from "../models/Details";
+import Footer from "./Footer";
 
 export default function InfoPage() {
   const [games, setGames] = useState<GetDetails>();

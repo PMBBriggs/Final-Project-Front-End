@@ -1,45 +1,62 @@
-.Footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    margin: 20px 0px 0px 0px;
-    
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100% vw;
+  margin: 20px 0px 0px 0px;
+  background-color: #020708;
+  border-bottom: 1px solid #1f455f;
+  box-shadow: 0 0 10px #6a97b8;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.Footer i{
-    color: white;
-    background-color: black;
+.Footer i {
+  color: white;
+  background-color: black;
 }
 
-.Footer .subscribe{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 6px;
+.Footer .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6px;
 }
 
-.Footer #emailInput{
-    background: white;
-    color: rgb(48, 48, 48);
-    border: none;
-    border-radius: 30px;
-    width: 150px;
+.Footer #emailInput {
+  background: white;
+  color: rgb(48, 48, 48);
+  border: none;
+  border-radius: 30px;
+  width: 150px;
 }
 
-.Footer button{
-    background-color: #ffff33;
-    border: none;
-    border-radius: 10px;
-    font-family: "Teko", sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    width: 50px;
-    height: 20px;
-    text-align: center;
-    margin-top: 15px;
+.Footer button {
+  background-color: #020708;
+  color: #f1f1f1;
+  box-shadow: 0 0 20px #ffff33;
+  border: 0.75px solid #fffff2;
+  border-radius: 10px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  width: 50px;
+  height: 23px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
- .Footer .fa-brands{
-    box-shadow: 0 0 15px #7B2246;
-
+.Footer button:hover {
+  box-shadow: 0 0 20px #ffff33, 0 0 25px #ffff33;
+  background-color: #ffff33;
+  color: #020708;
+}
+.Footer .fa-brands {
+  box-shadow: 0 0 20px #7b2246;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 10px;
+  animation: flicker 3s infinite alternate;
 }

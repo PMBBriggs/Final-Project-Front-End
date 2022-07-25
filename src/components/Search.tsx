@@ -6,6 +6,7 @@ import { Result } from "../models/Games";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
 import FilterContext from "../context/FilterContext";
+import Footer from "./Footer";
 
 export default function Search() {
   const [games, setGames] = useState<Result[]>([]);

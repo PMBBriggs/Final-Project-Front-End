@@ -1,5 +1,5 @@
-.HomePage{
-  margin: 15px;;
+.HomePage {
+  margin-left: 10px;
 }
 
 .HomePage .categoryContainer img {
@@ -9,35 +9,67 @@
 #creatorTitle {
   margin: 110px 0px 0px 5px;
   font-size: 40px;
-  box-shadow: 0 0 10px #0D4383;
+  box-shadow: 0 0 40px #0d4383;
+  border: 1.5px solid #99d4fe;
+  transition: all 0.1s ease-in-out;
   width: 180px;
   padding-left: 10px;
   border-radius: 10px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
-
 }
-
+#creatorTitle:hover {
+  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
+}
+.HomePage h1 {
+  color: #f1f1f1;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  margin: 10px 10px;
+}
+.HomePage h2.categories {
+  margin-top: 30px;
+  box-shadow: 0 0 40px #0d4383;
+  border: 1.5px solid #99d4fe;
+  transition: all 0.1s ease-in-out;
+  margin-bottom: 0px;
+}
+.HomePage h2.categories:hover {
+  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
+}
 .HomePage .categories {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 40px;
   margin-top: 70px;
-  margin-bottom: 20px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
   border-radius: 10px;
-  box-shadow: 0 0 10px #0D4383;
+  box-shadow: 0 0 10px #0d4383;
   width: 200px;
   padding-left: 10px;
 }
-
-.HomePage .fa.fa-caret-down{
+.HomePage .dropdown-content {
+  position: absolute;
+  background: #040e1a;
+  box-shadow: 0 0 15px #0d4383;
+  border: 1.5px solid #99d4fe;
+  width: 200px;
+  border-radius: 10px;
+}
+.HomePage .fa.fa-caret-down {
   margin: 0px 0px 0px 8px;
 }
-.HomePage button.categories{
-  box-shadow: 0 0 10px #0D4383;
-  border: none;
+
+.HomePage button.categories {
+  box-shadow: 0 0 40px #0d4383;
+  border: 1.5px solid #99d4fe;
+  transition: all 0.1s ease-in-out;
   margin-top: 0px 0px 20px 0px;
+}
+
+.HomePage button.categories:hover {
+  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
 }
 
 .HomePage .categoryContainer {
@@ -47,17 +79,6 @@
   height: 300px;
 }
 
-.HomePage h1 {
-  color: #f1f1f1;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  font-size: 50px;
-  margin: 10px 10px;
-}
-.HomePage p{
-  font-size: 30px;
-  margin: 0px 0px 0px 5px;
-}
 .HomePage button {
   background: none;
 }
@@ -65,18 +86,16 @@
 .HomePage p {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
-}
-
-
-.mostPopularDiv{
-  background-color: bisque;
+  font-size: 30px;
+  margin: 0px 0px 0px 5px;
+  margin-top: 15px;
 }
 
 /* scrollbar styling */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-} 
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
