@@ -29,19 +29,19 @@ export default function GameCard(game: Result) {
       <i
         className="fa-regular fa-heart"
         onClick={() => {
+          console.log("adding a game");
+
           addGame(game);
           //   console.log(wishlist);
         }}
       ></i>
-      ) : (
       <i
         className="fa-solid fa-heart"
         onClick={() => {
-          // console.log(game);
+          console.log("deleting a game");
           deleteGame(game);
         }}
       ></i>
-      )
     </div>
   );
 }

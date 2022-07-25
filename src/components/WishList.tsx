@@ -17,7 +17,7 @@ export default function Wishlist({ gamewishlist }: Props) {
       <h1>Wish List</h1>
       <h1>Wish List</h1>
       {gamewishlist.map((game, index) => {
-        return <GameCard {...game} />;
+        return <GameCard {...game} key={index} />;
       })}
     </div>
   );

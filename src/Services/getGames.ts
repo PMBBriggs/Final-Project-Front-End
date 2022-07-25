@@ -36,6 +36,8 @@ export function fetchAllGames(): Promise<Result[]> {
 }
 
 export function addGame(game: Result): Promise<Result> {
+  console.log("adding a game inside the route");
+
   return axios
     .post<Result>(`${baseUrl}/wishlist`, game)
     .then((response) => response.data);
