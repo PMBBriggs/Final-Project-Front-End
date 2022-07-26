@@ -13,7 +13,7 @@ export default function AllGamesRoute() {
   }, []);
 
   return (
-    <div className="Gamecard">
+    <div>
       <Wishlist gamewishlist={games} />
     </div>
   );

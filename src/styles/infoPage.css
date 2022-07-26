@@ -1,12 +1,17 @@
 .infoPage {
-  margin-top: 80px;
+  margin: 80px 5px 0px 10px;
   font-family: "Teko", sans-serif;
   font-weight: 300;
   color: #f1f1f1;
+  margin: 80px auto;
 }
-section {
-  width: 600px;
+
+.infoPage p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin-left: 5px;
 }
+
 img {
   width: 450px;
   height: 500px;
@@ -27,6 +32,7 @@ img {
 }
 .ratingTag {
   font-weight: bold;
+  font-family: "Teko", sans-serif;
 }
 .releaseDateDiv {
   display: flex;
@@ -34,9 +40,11 @@ img {
 }
 .releaseTag {
   font-weight: bold;
+  font-family: "Teko", sans-serif;
 }
 .ratedTag {
   font-weight: bold;
+  font-family: "Teko", sans-serif;
 }
 .ratedTagDiv {
   display: flex;
@@ -50,4 +58,6 @@ img {
 .gameDescription {
   width: 350px;
   margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
 }

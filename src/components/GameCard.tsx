@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import GetDetails from "../models/Details";
 import { Result } from "../models/Games";
 import { addGame, deleteGame } from "../services/getGames";
+import '../styles/GameCard.css'
 
 // interface GameCardProps {
 //   game: GetDetails;

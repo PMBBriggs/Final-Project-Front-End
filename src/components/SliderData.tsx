@@ -7,7 +7,7 @@ export interface Slide {
 export const SliderData: Slide[] = [
 // {
 //     name: 'God of War 4',
-//     image: '/slider/gowbg.svg',
+//     image: '/slider/gow4fullPNG.png',
 //     character: '/slider/atreus.svg'
 // },
 {

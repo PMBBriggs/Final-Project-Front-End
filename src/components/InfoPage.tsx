@@ -25,11 +25,11 @@ export default function InfoPage() {
           alt="poster"
           className="poster"
         />
-        <img
+        {/* <img
           src={`${games?.background_image_additional}`}
           alt="poster"
           className="poster"
-        />
+        /> */}
       </div>
       <section className="gameDescription"> {games?.description_raw}</section>
 

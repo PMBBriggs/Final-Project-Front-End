@@ -1,6 +1,26 @@
 .Gamecard {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  border: 2px solid rgb(225, 202, 252);
+  border-radius: 20px;
+  background: none;
+  box-shadow: 0 0 15px #a733ff;
+  width: 365px;
+  height: 275px;
+  margin: 0px 25px 25px 0px;
+  position: relative;
 };
 
+.Gamecard .mainPoster img {
+  border-radius: 20px;
+}
+
+.Gamecard i{
+  position:absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 25px;
+}
+
+.Gamecard p {
+  font-size: 30px;
+  margin: 8px 0px 0px 10px;
+}

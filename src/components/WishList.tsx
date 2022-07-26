@@ -1,5 +1,6 @@
 import { Result } from "../models/Games";
 import GameCard from "./GameCard";
+import '../styles/WishList.css'
 
 interface Props {
   gamewishlist: Result[];
@@ -7,7 +8,7 @@ interface Props {
 
 export default function Wishlist({ gamewishlist }: Props) {
   return (
-    <div>
+    <div className="WishList">
       {gamewishlist.map((game, index) => {
         return <GameCard {...game} key={index} />;
       })}

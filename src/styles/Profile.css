@@ -1,12 +1,13 @@
 #signInDiv {
   text-align: center;
   height: 100% vh;
+  position: relative;
 }
 
 #profileBorder {
   border: 2px solid rgb(251, 252, 202);
   border-radius: 20px;
-  margin: 20% 15%;
+  margin: 30% 15%;
   background: none;
   box-shadow: 0 0 10px #ffff33;
   /* display block until sign in  */
@@ -27,7 +28,6 @@
   box-shadow: 0 0 25px #47a1b6;
   color: #b2f8fb;
   text-shadow: 0 0 20px #2158fc;
-
   background: none;
   margin-top: 30%;
   font-family: "Teko", sans-serif;
@@ -36,7 +36,9 @@
 }
 
 #signOutButton {
-  float: right;
+  position: absolute;
+  top: 110%;
+  right: 45%;
   border-radius: 10px;
   border: 2px solid #b2f8fb;
   box-shadow: 0 0 25px #47a1b6;
@@ -66,4 +68,10 @@
 #signInDiv a:hover,
 #signInDiv a:focus {
   text-shadow: 0 0 50px #2158fc;
+}
+
+@media only screen and (min-width: 600px) {
+  #signOutButton {
+    right: 48%;
+  }
 }

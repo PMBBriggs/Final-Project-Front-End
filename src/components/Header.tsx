@@ -47,6 +47,25 @@ export default function Header() {
           }}
         />
       </form>
+      {/* desktop menu */}
+      <div className="desktopMenu">
+          <a href="/">
+            
+            <i className="fa-solid fa-house"></i>Home
+          </a>
+          <a href="/profile">
+           
+            <i className="fa-solid fa-user"></i>Profile
+          </a>
+          <a href="/wishlist">
+           
+            <i className="fa-solid fa-bookmark"></i>Wishlist
+          </a>
+          <a href="/search">
+           
+            <i className="fa-solid fa-magnifying-glass"></i>Search
+          </a>
+        </div>
 
       {/* <!-- The overlay --> */}
       <div ref={navRef} id="myNav" className="overlay">
@@ -60,24 +79,24 @@ export default function Header() {
 
         <div className="overlay-content">
           <a href="/">
-            {" "}
+            
             <i className="fa-solid fa-house"></i>Home
           </a>
           <a href="/profile">
-            {" "}
+            
             <i className="fa-solid fa-user"></i>Profile
           </a>
           <a href="/wishlist">
-            {" "}
+            
             <i className="fa-solid fa-bookmark"></i>Wishlist
           </a>
           <a href="/search">
-            {" "}
+            
             <i className="fa-solid fa-magnifying-glass"></i>Search
           </a>
         </div>
       </div>
-      <span onClick={() => openNav()}>
+      <span className="burgerMenu" onClick={() => openNav()}>
         <i className="fa-solid fa-bars"></i>
       </span>
     </div>

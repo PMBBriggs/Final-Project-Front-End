@@ -1,5 +1,5 @@
 .SearchPage {
-  margin-top: 80px;
+  margin: 80px 0px 0px 20px;
   color: white;
   font-family: "Teko", sans-serif;
   display: flex;
@@ -11,6 +11,7 @@
   height: 200px;
   width: 350px;
   margin-left: 5px;
+  border-radius: 10px;;
 }
 .gameRating {
   margin-top: 0;
@@ -37,14 +38,14 @@ label {
   margin-right: 5px;
 }
 .SearchPage .dropbtn {
-  margin-top: 15px;
+  margin: 15px 0px 15px 0px;
   font-size: 20px;
   height: 30px;
   width: 135px;
   font-family: "Teko", sans-serif;
   background: none;
   color: #f1f1f1;
-  border: 1px solid #7b2246;
+  border: 1.5px solid #ffcbe0;
   box-shadow: 0 0 20px #7b2246;
   border-radius: 30px;
 }

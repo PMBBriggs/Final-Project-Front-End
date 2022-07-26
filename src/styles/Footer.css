@@ -2,11 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 55px;
   width: 100% vw;
   margin: 20px 0px 0px 0px;
   background-color: #020708;
-  border-bottom: 1px solid #1f455f;
   box-shadow: 0 0 10px #6a97b8;
   position: fixed;
   bottom: 0;
@@ -16,8 +15,10 @@
 
 .Footer i {
   color: white;
-  background-color: black;
+  background-color: none;
+  font-size: 20px;
 }
+
 
 .Footer .subscribe {
   display: flex;
@@ -32,24 +33,26 @@
   border: none;
   border-radius: 30px;
   width: 150px;
+  height:20px;
+  padding: 2px 0px 0px 5px;
 }
 
 .Footer button {
   background-color: #020708;
   color: #f1f1f1;
-  box-shadow: 0 0 20px #ffff33;
+  box-shadow: 0 0 15px #ffff33;
   border: 0.75px solid #fffff2;
   border-radius: 10px;
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  width: 50px;
-  height: 23px;
+  width: 55px;
   margin-top: 10px;
   margin-right: 10px;
+  padding: 1px 4px;
 }
 .Footer button:hover {
-  box-shadow: 0 0 20px #ffff33, 0 0 25px #ffff33;
+  box-shadow: 0 0 10px #ffff33, 0 0 15px #ffff33;
   background-color: #ffff33;
   color: #020708;
 }
@@ -59,4 +62,22 @@
   margin-left: 15px;
   margin-right: 10px;
   animation: flicker 3s infinite alternate;
+}
+
+@media only screen and (min-width: 600px){
+  .Footer #emailInput {
+    width: 300px;
+  }
+
+  .Footer .fa-brands{
+    font-size: 30px;
+    margin: 5px 30px 0px 30px;
+  }
+
+  .Footer button{
+    font-size: 20px;
+    width: 100px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
 }

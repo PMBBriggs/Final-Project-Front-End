@@ -1,9 +1,13 @@
 .HomePage {
   margin-left: 10px;
+  margin-bottom: 80px;
 }
 
 .HomePage .categoryContainer img {
   height: 200px;
+}
+.HomePage .categoryContainer {
+  height: 220px;
 }
 
 #creatorTitle {
@@ -13,7 +17,6 @@
   border: 1.5px solid #99d4fe;
   transition: all 0.1s ease-in-out;
   width: 180px;
-  padding-left: 10px;
   border-radius: 10px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
 }
@@ -26,28 +29,32 @@
   font-weight: 300;
   font-size: 50px;
   margin: 10px 10px;
+  text-align: center;
 }
-.HomePage h2.categories {
-  margin-top: 30px;
+.HomePage h2 {
+  margin: 30px 0px 20px 0px ;
   box-shadow: 0 0 40px #0d4383;
   border: 1.5px solid #99d4fe;
   transition: all 0.1s ease-in-out;
-  margin-bottom: 0px;
 }
 .HomePage h2.categories:hover {
   box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
 }
+
 .HomePage .categories {
   color: #f1f1f1;
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 40px;
-  margin-top: 70px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
   border-radius: 10px;
   box-shadow: 0 0 10px #0d4383;
   width: 200px;
   padding-left: 10px;
+}
+
+.HomePage .categories i{
+  font-size: 30px;
 }
 .HomePage .dropdown-content {
   position: absolute;
@@ -65,7 +72,7 @@
   box-shadow: 0 0 40px #0d4383;
   border: 1.5px solid #99d4fe;
   transition: all 0.1s ease-in-out;
-  margin-top: 0px 0px 20px 0px;
+  margin: 30px 0px 20px 0px;
 }
 
 .HomePage button.categories:hover {
@@ -104,7 +111,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgb(57, 57, 57);
   border-radius: 10px;
   width: 15px;
 }
@@ -112,4 +119,17 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media only screen and (min-width: 600px) {
+  .creatorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #creatorTitle{
+    font-size: 50px;
+    width: 300px;
+  }
 }

@@ -6,6 +6,7 @@ import { Result } from "../models/Games";
 import getGames from "../services/getGames";
 import "../styles/Search.css";
 import FilterContext from "../context/FilterContext";
+import GameCard from "./GameCard";
 
 export default function Search() {
   const [games, setGames] = useState<Result[]>([]);
@@ -237,21 +238,10 @@ export default function Search() {
       </div>
       <div className="searchResultsContainer">
         {games.map((game, index) => (
-          <div
-            onClick={(e) => {
-              goToGameCard(game);
-            }}
-          >
-            <h1 className="nameOfGame" key={index}>
-              {game.name}
-            </h1>
-            <img
-              src={game.background_image}
-              alt="poster"
-              className="mainPoster"
-            />
-            <p className="gameRating"> Rating: {game.rating}</p>
+          <div key={index}>
+            <GameCard {...game} />
           </div>
+        
         ))}
       </div>
     </div>
