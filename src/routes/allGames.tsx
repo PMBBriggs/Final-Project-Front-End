@@ -10,7 +10,7 @@ export default function AllGamesRoute() {
 
   useEffect(() => {
     fetchAllGames().then((res) => setGames(res));
-  }, [games]);
+  }, []);
 
   return (
     <div className="Gamecard">
