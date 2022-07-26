@@ -19,7 +19,6 @@
   font-size: 20px;
 }
 
-
 .Footer .subscribe {
   display: flex;
   flex-direction: column;
@@ -33,7 +32,7 @@
   border: none;
   border-radius: 30px;
   width: 150px;
-  height:20px;
+  height: 20px;
   padding: 2px 0px 0px 5px;
 }
 
@@ -64,17 +63,17 @@
   animation: flicker 3s infinite alternate;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 800px) {
   .Footer #emailInput {
     width: 300px;
   }
 
-  .Footer .fa-brands{
+  .Footer .fa-brands {
     font-size: 30px;
     margin: 5px 30px 0px 30px;
   }
 
-  .Footer button{
+  .Footer button {
     font-size: 20px;
     width: 100px;
     margin-right: 30px;

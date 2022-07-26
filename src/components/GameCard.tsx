@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import WishlistContext from "../context/WishlistContext";
 import GetDetails from "../models/Details";
 import { Result } from "../models/Games";
 import { addGame, deleteGame } from "../services/getGames";
-import '../styles/GameCard.css'
+import "../styles/GameCard.css";
 
 // interface GameCardProps {
 //   game: GetDetails;
@@ -12,7 +13,11 @@ import '../styles/GameCard.css'
 
 export default function GameCard(game: Result) {
   const navigate = useNavigate();
-  const [showHeart, setShowHeart] = useState(false);
+  const { wishlist, refreshWishlist } = useContext(WishlistContext);
+
+  const [showHeart, setShowHeart] = useState(
+    wishlist.some((wishlistGame) => wishlistGame.id === game.id)
+  );
   function goToGameCard(game: Result) {
     navigate(`/infopage/${game.id}`);
   }
@@ -33,7 +38,9 @@ export default function GameCard(game: Result) {
         onClick={() => {
           console.log("adding a game");
 
-          addGame(game);
+          addGame(game).then(() => {
+            refreshWishlist();
+          });
           setShowHeart(!showHeart);
           //   console.log(wishlist);
         }}
@@ -43,7 +50,9 @@ export default function GameCard(game: Result) {
         className="fa-solid fa-heart"
         onClick={() => {
           console.log("deleting a game");
-          deleteGame(game);
+          deleteGame(game).then(() => {
+            refreshWishlist();
+          });
           setShowHeart(!showHeart);
         }}
         style={showHeart === true ? { display: "block" } : { display: "none" }}

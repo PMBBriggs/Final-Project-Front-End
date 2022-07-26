@@ -126,48 +126,47 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .Header{
-    display:flex;
+@media only screen and (min-width: 800px) {
+  .Header {
+    display: flex;
     align-items: center;
     justify-content: space-between;
   }
- .burgerMenu{
-  display: none;
- }
- 
- .logo{
-  font-size: 45px;
-  width: 300px;
- }
+  .burgerMenu {
+    display: none;
+  }
 
+  .logo {
+    font-size: 45px;
+    width: 300px;
+  }
 
- .desktopMenu a {
-  font-size:30px;
-  color: #f1f1f1;
-  text-decoration: none;
-  margin: 5px 10px 0px 0px;
- }
+  .desktopMenu a {
+    font-size: 30px;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 5px 10px 0px 0px;
+  }
 
- .desktopMenu .fa-solid.fa-house{
-  font-size: 15px;
-  margin: 0px 5px 10px 5px;
- }
- .desktopMenu .fa-solid.fa-user{
-  font-size: 15px;
-  margin: 0px 5px 10px 5px;
- }
- .desktopMenu .fa-solid.fa-bookmark{
-  font-size: 15px;
-  margin: 0px 5px 10px 5px;
- }
- .desktopMenu .fa-solid.fa-magnifying-glass{
-  font-size: 15px;
-  margin: 0px 5px 10px 5px;
- }
+  .desktopMenu .fa-solid.fa-house {
+    font-size: 15px;
+    margin: 0px 5px 10px 5px;
+  }
+  .desktopMenu .fa-solid.fa-user {
+    font-size: 15px;
+    margin: 0px 5px 10px 5px;
+  }
+  .desktopMenu .fa-solid.fa-bookmark {
+    font-size: 15px;
+    margin: 0px 5px 10px 5px;
+  }
+  .desktopMenu .fa-solid.fa-magnifying-glass {
+    font-size: 15px;
+    margin: 0px 5px 10px 5px;
+  }
 
- .searchBar{
-  margin-top: 0px;
-  width: 300px;
- }
+  .searchBar {
+    margin-top: 0px;
+    width: 300px;
+  }
 }

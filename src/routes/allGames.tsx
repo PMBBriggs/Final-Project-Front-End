@@ -1,20 +1,13 @@
-import { useEffect, useState } from "react";
-import { Result } from "../models/Games";
-import { addGame, deleteGame, fetchAllGames } from "../services/getGames";
-import GetDetails from "../models/Details";
-import GetGames from "../models/Games";
+import { useContext } from "react";
 import Wishlist from "../components/WishList";
+import WishlistContext from "../context/WishlistContext";
 
 export default function AllGamesRoute() {
-  const [games, setGames] = useState<Result[]>([]);
-
-  useEffect(() => {
-    fetchAllGames().then((res) => setGames(res));
-  }, []);
+  const { wishlist } = useContext(WishlistContext);
 
   return (
     <div>
-      <Wishlist gamewishlist={games} />
+      <Wishlist gamewishlist={wishlist} />
     </div>
   );
 }
