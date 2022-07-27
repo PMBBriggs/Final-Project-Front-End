@@ -63,6 +63,11 @@
 .searchResults {
   justify-content: center;
 }
+
+.desktopMenu {
+  display: none;
+}
+
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -132,6 +137,10 @@
     align-items: center;
     justify-content: space-between;
   }
+  .desktopMenu {
+    display: block;
+  }
+
   .burgerMenu {
     display: none;
   }

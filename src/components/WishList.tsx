@@ -10,7 +10,7 @@ export default function Wishlist({ gamewishlist }: Props) {
   return (
     <div className="WishList">
       {gamewishlist.map((game, index) => {
-        return <GameCard {...game} key={game.id} />;
+        return <GameCard {...game} key={game._id} />;
       })}
     </div>
   );

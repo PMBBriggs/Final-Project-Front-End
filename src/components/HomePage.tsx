@@ -49,7 +49,7 @@ export default function HomePage() {
 
   return (
     <div className="HomePage">
-      <div className='creatorContainer'>
+      <div className="creatorContainer">
         <h1 id="creatorTitle">Creators Picks!</h1>
         <ImageSlider />
       </div>
