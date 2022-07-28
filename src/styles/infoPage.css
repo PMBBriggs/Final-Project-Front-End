@@ -4,6 +4,9 @@
   font-weight: 300;
   color: #f1f1f1;
   margin: 80px auto;
+  justify-content: center;
+  width: 400px;
+  padding: 50px;
 }
 
 .infoPage p {
@@ -20,6 +23,7 @@ img {
 .nameOfGame {
   font-size: 25px;
   margin-bottom: 0px;
+  margin-left: 10px;
 }
 
 .gameInfo {

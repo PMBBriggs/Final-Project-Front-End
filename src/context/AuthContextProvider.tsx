@@ -12,9 +12,9 @@ export default function AuthContextProvider({
   useEffect(() => {
     // useEffect to only register once at start
     return auth.onAuthStateChanged((newUser) => {
-      if (newUser) setUser(newUser);
+      setUser(newUser);
     });
-  }, [user]);
+  }, []);
   return (
     <AuthContext.Provider value={{ user }}> {children} </AuthContext.Provider>
   );

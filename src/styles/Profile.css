@@ -9,7 +9,7 @@
   border-radius: 20px;
   margin: 30% 15%;
   background: none;
-  box-shadow: 0 0 10px #ffff33;
+  box-shadow: 0 0 15px #ffff33;
   /* display block until sign in  */
 }
 
@@ -72,6 +72,10 @@
 
 @media only screen and (min-width: 600px) {
   #signOutButton {
-    right: 48%;
+    right: 46%;
   }
+  /* #profileBorder {
+    margin: 310px;
+    width: 50%;
+  } */
 }
