@@ -1,8 +1,8 @@
 .Gamecard {
-  border: 2px solid rgb(225, 202, 252);
+  border: 2px solid rgb(241, 194, 255);
   border-radius: 20px;
   background: none;
-  box-shadow: 0 0 15px #a733ff;
+  box-shadow: 0 0 17px rgb(201, 25, 255);
   width: 365px;
   height: 258px;
   margin: 20px 25px 25px 0px;

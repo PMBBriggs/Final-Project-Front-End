@@ -6,8 +6,8 @@
   margin: 80px auto;
 }
 
-.infoPage p{
-  font-family: 'Montserrat', sans-serif;
+.infoPage p {
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   margin-left: 5px;
 }
@@ -58,6 +58,6 @@ img {
 .gameDescription {
   width: 350px;
   margin-left: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
 }

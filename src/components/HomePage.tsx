@@ -64,7 +64,7 @@ export default function HomePage() {
         ))}
       </div>
 
-      <div className="dropdown">
+      <div className="dropdown" id="genreDropdown">
         <button
           className="dropbtn categories"
           onClick={() => {
@@ -168,7 +168,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      <div className="dropdown">
+      <div className="dropdown" id="platformDropdown">
         <button
           className="dropbtn categories"
           onClick={() => {

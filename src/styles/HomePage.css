@@ -13,15 +13,15 @@
 #creatorTitle {
   margin: 110px 0px 0px 5px;
   font-size: 40px;
-  box-shadow: 0 0 40px #0d4383;
-  border: 1.5px solid #99d4fe;
+  box-shadow: 0 0 20px #78fbff;
+  border: 1.5px solid #fefffc;
   transition: all 0.1s ease-in-out;
   width: 180px;
   border-radius: 10px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
 }
 #creatorTitle:hover {
-  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
+  box-shadow: 0 0 20px #78fbff, 0 0 20px #78fbff;
 }
 .HomePage h1 {
   color: #f1f1f1;
@@ -33,12 +33,12 @@
 }
 .HomePage h2 {
   margin: 30px 0px 20px 0px;
-  box-shadow: 0 0 40px #0d4383;
-  border: 1.5px solid #99d4fe;
+  box-shadow: 0 0 50px #0000ff;
+  border: 1.5px solid #ceeaff;
   transition: all 0.1s ease-in-out;
 }
 .HomePage h2.categories:hover {
-  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
+  box-shadow: 0 0 30px #0000ff, 0 0 30px #0000ff;
 }
 
 .HomePage .categories {
@@ -48,7 +48,7 @@
   font-size: 40px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
   border-radius: 10px;
-  box-shadow: 0 0 10px #0d4383;
+  box-shadow: 0 0 35px #0000ff;
   width: 200px;
   padding-left: 10px;
 }
@@ -61,8 +61,8 @@
   position: absolute;
   z-index: 10;
   background: #040e1a;
-  box-shadow: 0 0 15px #0d4383;
-  border: 1.5px solid #99d4fe;
+  box-shadow: 0 0 15px #0000ff;
+  border: 1.5px solid #ceeaff;
   width: 200px;
   border-radius: 10px;
 }
@@ -71,14 +71,14 @@
 }
 
 .HomePage button.categories {
-  box-shadow: 0 0 40px #0d4383;
-  border: 1.5px solid #99d4fe;
+  box-shadow: 0 0 40px #0000ff;
+  border: 1.5px solid #ceeaff;
   transition: all 0.1s ease-in-out;
   margin: 30px 0px 20px 0px;
 }
 
 .HomePage button.categories:hover {
-  box-shadow: 0 0 50px #0d4383, 0 0 40px #0d4383;
+  box-shadow: 0 0 30px #0000ff, 0 0 30px #0000ff;
 }
 
 .HomePage .categoryContainer {

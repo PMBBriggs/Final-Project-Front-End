@@ -1,6 +1,6 @@
 .Header {
   height: 55px;
-  border-bottom: 1px solid #1f455f;
+  border-bottom: 1px solid #0a2064;
 }
 
 .Header i {
@@ -39,7 +39,7 @@
   color: #f1f1f1;
   background-color: #041014;
   height: 65px;
-  box-shadow: 0 0 20px #6a97b8;
+  box-shadow: 0 0 10px #0000ff;
 }
 .Header ::placeholder {
   font-family: "Teko", sans-serif;
