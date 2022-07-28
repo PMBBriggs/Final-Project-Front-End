@@ -33,12 +33,12 @@
 }
 .HomePage h2 {
   margin: 30px 0px 20px 0px;
-  box-shadow: 0 0 50px #0000ff;
+  box-shadow: 0 0 40px #3737ff;
   border: 1.5px solid #ceeaff;
   transition: all 0.1s ease-in-out;
 }
 .HomePage h2.categories:hover {
-  box-shadow: 0 0 30px #0000ff, 0 0 30px #0000ff;
+  box-shadow: 0 0 30px #3737ff, 0 0 30px #3737ff;
 }
 
 .HomePage .categories {
@@ -48,7 +48,7 @@
   font-size: 40px;
   text-shadow: 1px 1px 1px rgb(155, 155, 155);
   border-radius: 10px;
-  box-shadow: 0 0 35px #0000ff;
+  box-shadow: 0 0 35px #3737ff;
   width: 200px;
   padding-left: 10px;
 }
@@ -61,7 +61,7 @@
   position: absolute;
   z-index: 10;
   background: #040e1a;
-  box-shadow: 0 0 15px #0000ff;
+  box-shadow: 0 0 15px #3737ff;
   border: 1.5px solid #ceeaff;
   width: 200px;
   border-radius: 10px;
@@ -71,14 +71,14 @@
 }
 
 .HomePage button.categories {
-  box-shadow: 0 0 40px #0000ff;
+  box-shadow: 0 0 40px #3737ff;
   border: 1.5px solid #ceeaff;
   transition: all 0.1s ease-in-out;
   margin: 30px 0px 20px 0px;
 }
 
 .HomePage button.categories:hover {
-  box-shadow: 0 0 30px #0000ff, 0 0 30px #0000ff;
+  box-shadow: 0 0 30px #3737ff, 0 0 30px #3737ff;
 }
 
 .HomePage .categoryContainer {
